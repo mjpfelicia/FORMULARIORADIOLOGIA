@@ -1,0 +1,429 @@
+/* ============ VARIÁVEIS ============ */
+:root {
+  /* Tipografia */
+  --fonte-base: 100%/1.5 sans-serif, Arial;
+  
+  /* Cores */
+  --verde-principal: #00A650;
+  --verde-claro: #04A752;
+  --verde-claro-2: #5CC68F;
+  --verde-claro-3: #34a271;
+  --verde-label: #0BA957;
+  --azul-principal: #0095DA;
+  --azul-claro: #4DB4E4;
+  --azul-escuro: #08395F;
+  --azul-texto: #09395F;
+  --azul-medio: #004080;
+  --azul-hover: #003366;
+  --amarelo-bg: #F1F6DF;
+  --amarelo-header: #A6CE39;
+  --azul-bg: #D5E4F5;
+  --cinza-claro: #f9f9f9;
+  --cinza-texto: #555;
+  --cinza-texto-2: #333;
+  --cinza-borda: #ccc;
+  --cinza-escuro: #3c3131;
+  --branco: #fff;
+  --preto-sombra: rgb(0 0 0 / 0.1);
+  
+  /* Tamanhos */
+  --espaco-xs: 0.3rem;
+  --espaco-sm: 0.5rem;
+  --espaco-md: 1rem;
+  --espaco-lg: 1.5rem;
+  --espaco-xl: 2rem;
+  --espaco-xxl: 5rem;
+  
+  --fonte-xs: 0.85rem;
+  --fonte-sm: 0.9rem;
+  --fonte-md: 0.95rem;
+  --fonte-lg: 1.2rem;
+  --fonte-xl: 2rem;
+  --fonte-xxl: xxx-large;
+  
+  /* Bordas */
+  --borda-radius-sm: 4px;
+  --borda-radius-md: 6px;
+  --borda-fina: 1px solid var(--cinza-borda);
+  --borda-escura: 1px solid var(--cinza-escuro);
+  --sombra-sm: 0 0 6px var(--preto-sombra);
+  --sombra-md: 0 0 10px rgb(0 0 0 / 0.05);
+}
+
+/* ============ ESTRUTURA PRINCIPAL ============ */
+.formulario-container {
+  margin: var(--espaco-xl) auto;
+  padding: var(--espaco-md);
+  font-family: sans-serif, Arial;
+  color: var(--cinza-texto-2);
+}
+
+.form-tres-colunas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--espaco-lg);
+}
+
+/* ============ SEÇÃO CHECKBOX ============ */
+.secao-checkbox {
+
+  border-radius: var(--borda-radius-md);
+  box-shadow: var(--sombra-sm);
+}
+.box-checkbox{
+  background-color: var(--amarelo-bg);
+padding: var(--espaco-md) var(--espaco-lg);
+  border-radius: var(--borda-radius-md);
+  box-shadow: var(--sombra-sm);
+  margin-bottom: var(--espaco-lg);
+  padding-bottom: var(--espaco-xxl);
+}
+.secao-checkbox h1 {
+margin-bottom: 2rem;
+  font-size: var(--fonte-lg);
+  color: var(--branco);
+  background-color: var(--amarelo-header);
+  text-align: center;
+  font-weight: bolder;
+  padding:5px;
+}
+
+.titulo-radiologia {
+  font-size: var(--fonte-lg);
+  color: var(--branco);
+  background-color: var(--azul-principal)!important;
+  font-weight: 200!important;
+  text-align: center;
+  font-size: x-large;
+  margin-bottom: 0 !important;
+
+
+}
+
+.checkbox-group {
+  margin-top: var(--espaco-md);}
+
+.checkbox-group label {
+
+  margin-bottom: var(--espaco-md);
+}
+
+.radiologia-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-md);
+  padding: var(--espaco-sm);
+  background-color: var(--azul-bg);
+  border-radius: var(--borda-radius-md);
+  height: 100%;
+}
+
+.checkbox-container {
+  display: flex;
+  gap: var(--espaco-md);
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  margin-bottom: var(--espaco-md);
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: var(--fonte-md);
+  color: #222;
+}
+
+.checkbox-ferradura label {
+  white-space: nome;
+}
+
+.checkbox-outro {
+  border: var(--borda-escura) !important;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.input-outro {
+  margin-left: var(--espaco-sm);
+  padding: var(--espaco-xs) var(--espaco-sm);
+  font-size: var(--fonte-sm);
+  border: var(--borda-fina);
+  border-radius: var(--borda-radius-sm);
+  flex-grow: 1;
+}
+
+/* ============ SEÇÃO UNIDADES ============ */
+.unidades-container {
+  background: var(--branco);
+
+  border-radius: var(--borda-radius-md);
+  box-shadow: var(--sombra-md);
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.unidade h3 {
+  margin-bottom: 0.3rem;
+  color: var(--azul-medio);
+  font-weight: 600;
+  font-size: large;
+}
+
+.unidade p {
+  margin: 0.1rem 0;
+  font-size: var(--fonte-xs);
+  color: var(--cinza-texto);
+}
+
+/* ============ SEÇÃO GRANÇUM ============ */
+.grancum-form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.grancum-form-container h3 {
+  margin: 0.9rem 0;
+  color: var(--verde-claro-3);
+  font-weight: 600;
+  font-size: xx-large;
+  text-align: center;
+  border-top: var(--borda-fina);
+  border-bottom: var(--borda-fina);
+}
+
+.grancum-header {
+  background-color: var(--azul-escuro);
+  padding: var(--espaco-md) var(--espaco-lg);
+  text-align: center;
+}
+
+.grancum-header h1 {
+  margin: 0 0 0.2rem 0;
+  font-size: var(--fonte-xxl);
+  font-weight: 800;
+  color: var(--branco);
+}
+
+.grancum-header h2 {
+  margin: 0 0 0.2rem 0;
+  font-weight: 600;
+  font-size: large;
+  color: var(--verde-claro);
+  white-space: nowrap;
+}
+
+.grancum-header h3 {
+  margin: 0;
+  font-size: var(--fonte-xl);
+  color: var(--verde-claro-3);
+  font-weight: 600;
+}
+
+/* ============ FORMULÁRIOS ============ */
+.form-section {
+  background: var(--branco);
+  padding: var(--espaco-md) var(--espaco-lg);
+  margin-bottom: var(--espaco-lg);
+  border-bottom: var(--borda-fina);
+}
+
+.form-section:not(:last-child) {
+  border-bottom: var(--borda-fina);
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-md);
+  margin-bottom: var(--espaco-md);
+}
+
+.form-group-date,
+.text-nome {
+  color: var(--verde-label);
+}
+
+.text-nome {
+  margin-bottom: 0 !important;
+  padding: 0;
+}
+
+.form-titulo {
+  font-size: var(--fonte-xl);
+  font-weight: 600;
+  color: var(--azul-texto);
+  margin-bottom: var(--espaco-md);
+  text-align: center;
+}
+
+.form-group-date {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--espaco-sm);
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: var(--fonte-sm);
+}
+
+.form-group-date label {
+  flex: 0 0 auto;
+  margin-right: var(--espaco-sm);
+}
+
+.input-date,
+.input-tel {
+  border: none;
+  border-bottom: var(--borda-fina);
+  background-color: transparent;
+  font-size: var(--fonte-md);
+  padding: 0.4rem 0.6rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+  border-radius: 0;
+  position: relative;
+}
+
+.input-text {
+  padding: 0 !important;
+  height: 1px;
+}
+
+.input-date {
+  width: 40%;
+}
+
+.input-tel {
+  width: 40%;
+}
+
+.form-row .form-group[style*="gridColumn"] {
+  grid-column: span 3 !important;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group input,
+.form-group textarea {
+  border: none;
+  border-bottom: var(--borda-fina);
+  background-color: transparent;
+  font-size: var(--fonte-md);
+  padding: 0.4rem 0.6rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+  border-radius: 0;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-bottom: 1px solid var(--azul-medio);
+}
+
+.form-group label {
+  font-weight: bold;
+  font-size: var(--fonte-sm);
+  margin-bottom: 0.3rem;
+}
+
+.checkbox-prototipagem {
+  font-weight: bold !important;
+  font-size: var(--fonte-sm);
+  margin-bottom: 0.3rem;
+}
+
+.checkbox-outra,
+.input-outra {
+  font-weight: bold !important;
+  border: none;
+  border-bottom: var(--borda-fina);
+  background-color: transparent;
+  outline: none;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+  border-radius: 0;
+  font-size: var(--fonte-sm);
+  width: 100%;
+}
+
+.form-group textarea {
+  min-height: 60px;
+}
+
+.autorizacao {
+  margin-bottom: var(--espaco-md);
+  font-size: var(--fonte-sm);
+  user-select: none;
+}
+
+.autorizacao label {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.autorizacao input[type="check;box"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.footer {
+  margin-top: var(--espaco-xl);
+  font-size: var(--fonte-sm);
+  text-align: center;
+  color: var(--cinza-texto);
+}
+
+.footer p {
+  margin: 0.2rem 0;
+}
+
+.submit-button {
+  margin-top: var(--espaco-lg);
+  padding: 0.7rem 1.4rem;
+  background-color: var(--azul-medio);
+  border: none;
+  color: var(--branco);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.submit-button:hover {
+  background-color: var(--azul-hover);
+}
+
+/* ============ RESPONSIVO ============ */
+@media (max-width: 900px) {
+  .form-tres-colunas {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .form-group[style*="gridColumn"] {
+    grid-column: auto !important;
+  }
+}

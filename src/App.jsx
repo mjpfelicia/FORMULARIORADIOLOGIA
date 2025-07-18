@@ -1,5 +1,5 @@
 import React from 'react';
-import FormularioOdontologico from './components/FormularioOdontologico';
+import FormularioOdontologico from './components/FormularioOdontologico/FormularioOdontologico';
 
 const App = () => {
     return (
