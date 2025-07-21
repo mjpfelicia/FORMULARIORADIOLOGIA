@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './FormularioOdontologico.css';
-import CustomCheckbox from '../CustomCheckbox/CustomCheckbox'; 
-import LocalizacaoClinica from '../LocalizacaoClinica/LocalizacaoClinica'; 
+import CustomCheckbox from '../CustomCheckbox/CustomCheckbox'; // Importando o componente de checkbox personalizado
+import LocalizacaoClinica from '../LocalizacaoClinica/LocalizacaoClinica';
 
 const FormularioOdontologico = () => {
   // Estado para armazenar os dados do formulário
@@ -83,24 +83,53 @@ const FormularioOdontologico = () => {
           COLUNA 1: secao-checkbox 
           Contém os grupos de checkbox do LAB 3D, Impressão de Modelo e demais modelos.
         */}
-        <div className="secao-checkbox">
+        <div className="secao-checkbox col-4">
           <div className="box-checkbox">
             <h1>LAB 3D</h1>
             <div className="checkbox-container">
+              <div className="col-6">
 
-              {/* Grupo Prototipagem */}
+                <CustomCheckbox
+                  id="prototipagem"
+                  className="checkbox-prototipagem altura-grupo"
+                  label=" Prototipagem (Biomodelo3D)"
+                  checked={formData.enviarMaisUmFormulario}
+                  onChange={handleChange}
+                  disabled={false}
+                />
+                <CustomCheckbox
+                  id="impressaoModelo"
+                  className="checkbox-prototipagem altura-grupo checkbox-impressao-modelo"
+                  label="Impressão de Modelo"
+                  checked={formData.impressaoModelo}
+                  onChange={handleChange}
+                  disabled={false}
+                />
 
-              <CustomCheckbox
-                id="prototipagem"
-                className="checkbox-prototipagem"
-                label=" Prototipagem (Biomodelo3D)"
-                checked={formData.enviarMaisUmFormulario}
-                onChange={handleChange}
-                disabled={false}
-              />
-              {/* Subgrupo Maxila, Mandíbula e Outro */}
-              <div className="sub-checkbox-group">
-                <div className="form-group">
+                <div className="demaismodelos altura-grupo">
+
+                  <CustomCheckbox
+                    id="demaisModelos1"
+                    className="checkbox-demais-modelos"
+                    label="Demais modelos da loja 3D"
+                    checked={formData.demaisModelos1}
+                    onChange={handleChange}
+                    disabled={false}
+                  />
+                  <CustomCheckbox
+                    id="demaisModelos2"
+                    className="checkbox-demais-modelos"
+                    label="Demais modelos da loja 3D"
+                    checked={formData.demaisModelos2}
+                    onChange={handleChange}
+                    disabled={false}
+                  />
+                </div>
+
+              </div>
+              <div className="col-6 h-100">
+                <div className="group1 altura-grupo">
+
                   <CustomCheckbox
                     id="maxila"
                     label="Maxila"
@@ -115,31 +144,74 @@ const FormularioOdontologico = () => {
                     onChange={handleChange}
                     disabled={false}
                   />
-                  <div className="form-group">
+                
                     <CustomCheckbox
                       id="mandibula"
                       label="Mandíbula"
                       checked={formData.mandibula}
                       onChange={handleChange}
                     />
-                  </div>
+                
                   <CustomCheckbox
                     id="mandibula"
                     label="Mandíbula Total"
                     checked={formData.mandibula}
                     onChange={handleChange}
                   />
-                </div>
-                <label className="checkbox-outra">Outra</label>
-                <input
-                  type="text"
-                  name="outra"
-                  checked={formData.outra}
-                  onChange={handleChange}
-                  className='input-outra'
-                />
 
+                  <div className="outra">
+
+                    <label className="checkbox-outra">Outra</label>
+                    <input
+                      type="text"
+                      name="outra"
+                      checked={formData.outra}
+                      onChange={handleChange}
+                      className='input-outra'
+                    />
+                  </div>
+                </div>
+                <div className="group2 altura-grupo">
+                  <CustomCheckbox
+                    id="modeloEstudo"
+                    label="Modelo de estudo (par)"
+                    checked={formData.modeloEstudo}
+                    onChange={handleChange}
+                    disabled={false}
+                  />
+
+                  <CustomCheckbox
+                    id="modeloFerradura"
+                    className="checkbox-ferradura"
+                    label={
+                      <>
+                        Modelo ferradura (par)
+                        <br />
+                        (para alinhador/placa)
+                      </>
+                    }
+                    checked={formData.modeloFerradura}
+                    onChange={handleChange}
+                    disabled={false}
+                  />
+                  <CustomCheckbox
+                    id="modeloTrabalho"
+                    label="Modelo de trabalho (par)"
+                    checked={formData.modeloTrabalho}
+                    onChange={handleChange}
+                    disabled={false}
+                  />
+                </div>
               </div>
+            </div>
+
+            {/* Grupo Prototipagem */}
+
+            {/* Subgrupo Maxila, Mandíbula e Outro */}
+            <div className="sub-checkbox-group">
+              <div className="form-group">
+
+             </div>
               {formData.outro && (
                 <input
                   type="text"
@@ -151,76 +223,8 @@ const FormularioOdontologico = () => {
                 />
               )}
             </div>
-
-            {/* Grupo Impressão de Modelo */}
-            <div className='checkbox-container'>
-              <CustomCheckbox
-                id="impressaoModelo"
-                label="Impressão de Modelo"
-                checked={formData.impressaoModelo}
-                onChange={handleChange}
-                disabled={false}
-              />
-
-
-              {/* Subgrupo modelos impressos */}
-
-              <div className="sub-checkbox-group">
-                <CustomCheckbox
-                  id="modeloEstudo"
-                  label="Modelo de estudo (par)"
-                  checked={formData.modeloEstudo}
-                  onChange={handleChange}
-                  disabled={false}
-                />
-
-                <CustomCheckbox
-                  id="modeloFerradura"
-                  className="checkbox-ferradura"
-                  label={
-                    <>
-                      Modelo ferradura (par)
-                      <br />
-                      (para alinhador/placa)
-                    </>
-                  }
-                  checked={formData.modeloFerradura}
-                  onChange={handleChange}
-                  disabled={false}
-                />
-                <CustomCheckbox
-                  id="modeloTrabalho"
-                  label="Modelo de trabalho (par)"
-                  checked={formData.modeloTrabalho}
-                  onChange={handleChange}
-                  disabled={false}
-                />
-              </div>
-            </div>
-
-
-            {/* Grupo Demais modelos da loja 3D */}
-            <div className="checkbox-group">
-              <CustomCheckbox
-                id="demaisModelos1"
-                className="checkbox-demais-modelos"
-                label="Demais modelos da loja 3D"
-                checked={formData.demaisModelos1}
-                onChange={handleChange}
-                disabled={false}
-              />
-              <CustomCheckbox
-                id="demaisModelos2"
-                className="checkbox-demais-modelos"
-                label="Demais modelos da loja 3D"
-                checked={formData.demaisModelos2}
-                onChange={handleChange}
-                disabled={false}
-              />
-
-            </div>
-
           </div>
+
           <h1 className='titulo-radiologia' >Radiologia</h1>
           <div className="radiologia-container">
           </div>
@@ -231,38 +235,18 @@ const FormularioOdontologico = () => {
           COLUNA 2: unidades-container 
           Apresenta as informações das unidades/endereços.
         */}
-        <div className="unidades-container">
+        <div className="unidades-container col-4">
+          <LocalizacaoClinica />
           <LocalizacaoClinica />
 
-          <div className="unidade">
-            <h3>SANTO ANDRÉ (CENTRO)</h3>
-            <p>Rua Álvares de Azevedo 154</p>
-            <p>Assessibilidade parcial: consulte-nos.</p>
-            <p>Estacionamento conveniado.</p>
-            <p>Unidade Santo André</p>
-            <p>CR09&lt;1.3569</p>
-            <p>sob responsabilidade técnica do Dr. Felício Seimo Rosa Zampieri</p>
-            <p>CR09&gt;37786</p>
-          </div>
-
-          <div className="unidade">
-            <h3>SÃO PAULO (IBIRAPUERA)</h3>
-            <p>Av. República do Líbano, 2139</p>
-            <p>Assessibilidade parcial: consulte-nos.</p>
-            <p>Estacionamento próprio.</p>
-            <p>Unidade São Paulo</p>
-            <p>CR09&lt;1.3487</p>
-            <p>sob responsabilidade técnica do Dra. Maria Paula Caiuli</p>
-            <p>Campanela Zampieri</p>
-            <p>CR09&gt;35228</p>
-          </div>
+          <LocalizacaoClinica />
         </div>
 
         {/* 
           COLUNA 3: grancum-form-container 
           
         */}
-        <div className="grancum-form-container">
+        <div className="grancum-form-container col-4">
 
           {/* Cabeçalho GRANÇUM (ocupando toda largura da coluna) */}
           <div className="grancum-header">

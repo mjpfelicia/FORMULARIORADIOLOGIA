@@ -2,7 +2,7 @@
 :root {
   /* Tipografia */
   --fonte-base: 100%/1.5 sans-serif, Arial;
-  
+
   /* Cores */
   --verde-principal: #00A650;
   --verde-claro: #04A752;
@@ -25,7 +25,7 @@
   --cinza-escuro: #3c3131;
   --branco: #fff;
   --preto-sombra: rgb(0 0 0 / 0.1);
-  
+
   /* Tamanhos */
   --espaco-xs: 0.3rem;
   --espaco-sm: 0.5rem;
@@ -33,14 +33,14 @@
   --espaco-lg: 1.5rem;
   --espaco-xl: 2rem;
   --espaco-xxl: 5rem;
-  
+
   --fonte-xs: 0.85rem;
   --fonte-sm: 0.9rem;
   --fonte-md: 0.95rem;
   --fonte-lg: 1.2rem;
   --fonte-xl: 2rem;
   --fonte-xxl: xxx-large;
-  
+
   /* Bordas */
   --borda-radius-sm: 4px;
   --borda-radius-md: 6px;
@@ -52,16 +52,14 @@
 
 /* ============ ESTRUTURA PRINCIPAL ============ */
 .formulario-container {
-  margin: var(--espaco-xl) auto;
   padding: var(--espaco-md);
   font-family: sans-serif, Arial;
   color: var(--cinza-texto-2);
 }
 
 .form-tres-colunas {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: var(--espaco-lg);
+  display: flex;
+ ;
 }
 
 /* ============ SEÇÃO CHECKBOX ============ */
@@ -70,29 +68,30 @@
   border-radius: var(--borda-radius-md);
   box-shadow: var(--sombra-sm);
 }
-.box-checkbox{
+
+.box-checkbox {
   background-color: var(--amarelo-bg);
-padding: var(--espaco-md) var(--espaco-lg);
+  padding: var(--espaco-sm) var(--espaco-sm);
   border-radius: var(--borda-radius-md);
   box-shadow: var(--sombra-sm);
   margin-bottom: var(--espaco-lg);
-  padding-bottom: var(--espaco-xxl);
 }
+
 .secao-checkbox h1 {
-margin-bottom: 2rem;
+  margin-bottom: 2rem;
   font-size: var(--fonte-lg);
   color: var(--branco);
   background-color: var(--amarelo-header);
   text-align: center;
   font-weight: bolder;
-  padding:5px;
+  padding: 5px;
 }
 
 .titulo-radiologia {
   font-size: var(--fonte-lg);
   color: var(--branco);
-  background-color: var(--azul-principal)!important;
-  font-weight: 200!important;
+  background-color: var(--azul-principal) !important;
+  font-weight: 200 !important;
   text-align: center;
   font-size: x-large;
   margin-bottom: 0 !important;
@@ -101,11 +100,16 @@ margin-bottom: 2rem;
 }
 
 .checkbox-group {
-  margin-top: var(--espaco-md);}
+  margin-top: var(--espaco-md);
+}
 
 .checkbox-group label {
 
   margin-bottom: var(--espaco-md);
+}
+
+.group2 {
+  margin-top: 2rem !important;
 }
 
 .radiologia-container {
@@ -120,21 +124,14 @@ margin-bottom: 2rem;
 
 .checkbox-container {
   display: flex;
-  gap: var(--espaco-md);
-  flex-wrap: nowrap;
-  align-items: flex-start;
-  margin-bottom: var(--espaco-md);
-  flex-direction: row;
-  justify-content: space-between;
+ 
 }
 
 .checkbox-label {
   display: flex;
   align-items: center;
-  gap: 0.3rem;
   cursor: pointer;
   white-space: nowrap;
-  font-size: var(--fonte-md);
   color: #222;
 }
 
@@ -152,6 +149,10 @@ margin-bottom: 2rem;
   cursor: pointer;
 }
 
+.checkbox-impressao-modelo {
+  margin-top: 2rem !important;
+}
+
 .input-outro {
   margin-left: var(--espaco-sm);
   padding: var(--espaco-xs) var(--espaco-sm);
@@ -159,6 +160,10 @@ margin-bottom: 2rem;
   border: var(--borda-fina);
   border-radius: var(--borda-radius-sm);
   flex-grow: 1;
+}
+
+.checkbox-demais-modelos {
+  padding-bottom: 1rem !important;
 }
 
 /* ============ SEÇÃO UNIDADES ============ */
@@ -169,7 +174,7 @@ margin-bottom: 2rem;
   box-shadow: var(--sombra-md);
   display: flex;
   flex-direction: column;
- 
+
 }
 
 .unidade h3 {
@@ -358,7 +363,7 @@ margin-bottom: 2rem;
   resize: vertical;
   border-radius: 0;
   font-size: var(--fonte-sm);
-  width: 100%;
+  width: 90%;
 }
 
 .form-group textarea {
@@ -426,4 +431,10 @@ margin-bottom: 2rem;
   .form-group[style*="gridColumn"] {
     grid-column: auto !important;
   }
+}
+
+
+
+.altura-grupo {
+  height: 10rem;
 }

@@ -1,11 +1,11 @@
 .custom-checkbox {
     position: relative;
-    display: inline-block;
     width: 100%;
     font-weight: bold;
-    margin-bottom: var(--espaco-sm);
     font-size: var(--fonte-sm);
     cursor: pointer;
+    padding-bottom: 0.3rem;
+
 }
 
 .checkbox-input {
