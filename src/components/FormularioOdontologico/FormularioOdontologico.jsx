@@ -142,8 +142,8 @@ const FormularioOdontologico = () => {
                     onChange={handleChange}
                     disabled={false}
                   />
-                </div>
 
+                </div>
               </div>
               <div className="col-6 h-100">
                 <div className="group1 altura-grupo">
@@ -171,9 +171,9 @@ const FormularioOdontologico = () => {
                   />
 
                   <CustomCheckbox
-                    id="mandibula"
+                    id="mandibulaTotal"
                     label="Mandíbula Total"
-                    checked={formData.mandibula}
+                    checked={formData.mandibulaTotal}
                     onChange={handleChange}
                   />
 
@@ -181,9 +181,9 @@ const FormularioOdontologico = () => {
 
                     <label className="checkbox-outra">Outra</label>
                     <input
-                      type="text"
-                      name="outra"
-                      checked={formData.outra}
+                      type="checkbox"
+                      name="outro"
+                      checked={formData.outro}
                       onChange={handleChange}
                       className='input-outra'
                     />
@@ -355,15 +355,20 @@ const FormularioOdontologico = () => {
             </div>
           </div>
           <div className="form-row">
-            <div className=" form-group form-group-profissional">
+
+            <div className="d-flex align-items-end" style={{ borderBottom: '1px solid #08395F' }}>
               <label className='text-nome'>Nome:</label>
-              <input
-                className='input-text'
-                type="text"
-                name="profissionalNome"
-                value={formData.profissionalNome}
-                onChange={handleChange}
-              />
+
+              <div className="nome-input-container">
+                <input
+                  type="text"
+                  name="profissionalNome"
+                  value={formData.pacienteNome}
+                  onChange={handleChange}
+                  className="nome-input"
+                />
+              </div>
+              <span>|</span>
               <label className='text-cro'>CRO/UF:</label>
               <input
                 className='input-cro'
@@ -373,8 +378,9 @@ const FormularioOdontologico = () => {
                 onChange={handleChange}
               />
             </div>
-            <div className="form-group">
-              <label className='text-especialidade'>Especialidade:</label>
+
+            <div className="form-group" style={{ borderBottom: '1px solid #08395F' }}>
+              <label>Especialidade:</label>
               <input
                 className='input-text'
                 type="text"
@@ -385,7 +391,7 @@ const FormularioOdontologico = () => {
             </div>
           </div>
 
-          <div className="form-group">
+          <div className="form-group" style={{ borderBottom: '1px solid #08395F' }}>
             <label>Endereço:</label>
             <input
               className='input-text'
@@ -396,20 +402,20 @@ const FormularioOdontologico = () => {
             />
           </div>
 
-          <div className="form-group form-group-endereco">
+          <div className="form-group form-group-endereco" style={{ borderBottom: '1px solid #08395F' }}>
             <div className="form-group-endereco">
               <label>Cidade:</label>
               <input
-                className='input-text'
+
                 type="text"
                 name="cidade"
                 value={formData.cidade}
                 onChange={handleChange}
               />
-
+              <span>|</span>
               <label>CEP:</label>
               <input
-                className='input-cep'
+
                 type="text"
                 name="cep"
                 value={formData.cep}
@@ -466,74 +472,75 @@ const FormularioOdontologico = () => {
               />
             </div>
           </div>
-        </div>
-        {/* Atenção especial */}
-        <div className="form-row">
-          <div className="form-group" style={{ gridColumn: 'span 3' }}>
-            <label>Atenção especial para:</label>
-            <textarea
-              name="atencaoEspecial"
-              value={formData.atencaoEspecial}
-              onChange={handleChange}
-            />
-          </div>
-        </div>
 
-        {/* Observações clínicas */}
-        <div className="form-row">
-          <div className="form-group" style={{ gridColumn: 'span 3' }}>
-            <label>Observações clínicas:</label>
-            <textarea
-              name="observacoes"
-              value={formData.observacoes}
-              onChange={handleChange}
-            />
+          {/* Atenção especial */}
+          <div className="form-row">
+            <div className="form-group" style={{ gridColumn: 'span 3' }}>
+              <label>Atenção especial para:</label>
+              <textarea
+                name="atencaoEspecial"
+                value={formData.atencaoEspecial}
+                onChange={handleChange}
+              />
+            </div>
           </div>
-        </div>
 
-        {/* Autorização */}
-        <div className="autorizacao">
-          <label>
-            <input
-              type="checkbox"
-              name="autorizacao"
-              checked={formData.autorizacao}
-              onChange={handleChange}
-            />
-            Autoriza eventual complementação necessária a critério do Radiologista
-          </label>
-        </div>
-
-        {/* Data e assinatura */}
-        <div className="form-row">
-          <div className="form-group">
-            <label>Data:</label>
-            <input
-              type="date"
-              name="data"
-              value={formData.data}
-              onChange={handleChange}
-            />
+          {/* Observações clínicas */}
+          <div className="form-row">
+            <div className="form-group" style={{ gridColumn: 'span 3' }}>
+              <label>Observações clínicas:</label>
+              <textarea
+                name="observacoes"
+                value={formData.observacoes}
+                onChange={handleChange}
+              />
+            </div>
           </div>
-          <div className="form-group">
-            <label>Assinatura:</label>
-            <input
-              type="text"
-              name="assinatura"
-              value={formData.assinatura}
-              onChange={handleChange}
-            />
-          </div>
-        </div>
 
-        {/* Rodapé com informações de contato */}
-        <div className="footer">
-          <p>Atendimento e Agendamento de Exames</p>
-          <p>Telefone 11 4127-8757 | On-line craneum.com.br</p>
+          {/* Autorização */}
+          <div className="autorizacao">
+            <label>
+              <input
+                type="checkbox"
+                name="autorizacao"
+                checked={formData.autorizacao}
+                onChange={handleChange}
+              />
+              Autoriza eventual complementação necessária a critério do Radiologista
+            </label>
+          </div>
+
+          {/* Data e assinatura */}
+          <div className="form-row">
+            <div className="form-group">
+              <label>Data:</label>
+              <input
+                type="date"
+                name="data"
+                value={formData.data}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="form-group">
+              <label>Assinatura:</label>
+              <input
+                type="text"
+                name="assinatura"
+                value={formData.assinatura}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+
+          {/* Rodapé com informações de contato */}
+          <div className="footer">
+            <p>Atendimento e Agendamento de Exames</p>
+            <p>Telefone 11 4127-8757 | On-line craneum.com.br</p>
+          </div>
+          {/* Closing tag for grancum-form-container */}
         </div>
-        {/* Closing tag for grancum-form-container */}
-      </form >
-    </div >
+      </form>
+    </div>
   );
 };
 

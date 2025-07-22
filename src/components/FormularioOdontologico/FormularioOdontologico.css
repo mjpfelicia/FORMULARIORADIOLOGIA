@@ -244,7 +244,6 @@
 
 }
 
-
 .form-row {
   display: flex;
   flex-direction: column;
@@ -264,7 +263,7 @@
   display: flex !important;
   flex-direction: row !important;
   align-items: flex-end;
-  margin-bottom: var(--espaco-md);
+
 
 }
 
@@ -307,8 +306,6 @@
   position: absolute;
   bottom: 0;
 }
-
-
 
 /* Container principal */
 .data-telefone-line {
@@ -377,10 +374,6 @@
   padding-bottom: 3px;
 }
 
-.form-group-date,
-.text-nome,
-.text-cro,
-.text-especialidade {}
 
 .text-nome {
   margin-bottom: 0 !important;
@@ -439,13 +432,13 @@
 .form-group {
   display: flex;
   flex-direction: column;
+  margin-bottom: var(--espaco-md);
 }
 
 .form-group input,
 .input-cro, .form-row-contato {
   border: none;
-  border-bottom: var(--borda-fina);
-  background-color: transparent;
+   background-color: transparent;
   font-size: var(--fonte-md);
   padding: 0.4rem 0.6rem;
   outline: none;
@@ -481,7 +474,7 @@
 .form-group label {
   font-weight: bold;
   font-size: var(--fonte-sm);
-  margin-bottom: 0.3rem;
+ 
 }
 
 .checkbox-prototipagem {
@@ -520,8 +513,6 @@
   font-size: small;
   color: var(--azul-claro);
 }
-
-
 
 .autorizacao {
   margin-bottom: var(--espaco-md);
