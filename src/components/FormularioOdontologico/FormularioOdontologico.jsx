@@ -261,11 +261,8 @@ const FormularioOdontologico = () => {
 
         {/* 
           COLUNA 3: grancum-form-container 
-          
-        */}
+         */}
         <div className="grancum-form-container col-4">
-
-          {/* Cabeçalho GRANÇUM (ocupando toda largura da coluna) */}
           <div className="grancum-header">
             <h1>GRANÇUM</h1>
             <h2>RADIOLOGIA E DOCUMENTAÇÃO ODONTOLÓGICA</h2>
@@ -277,10 +274,9 @@ const FormularioOdontologico = () => {
             {/* Dados do paciente */}
             <h4 className='form-titulo'>Paciente</h4>
 
-            {/* Linha Nome */}
+            {/*Nome */}
             <div className="form-row nome-line">
               <div className="d-flex align-items-end" style={{ borderBottom: '1px solid #08395F' }}>
-
                 <label className="nome-label">Nome:</label>
                 <div className="nome-input-container">
                   <input
@@ -290,7 +286,6 @@ const FormularioOdontologico = () => {
                     onChange={handleChange}
                     className="nome-input"
                   />
-
                 </div>
               </div>
             </div>
@@ -310,17 +305,15 @@ const FormularioOdontologico = () => {
                       className="input-hidden"
                       placeholder="dd/mm/aaaa"
                       maxLength="10"
-                      style={{ width: '150px' }}
+                      style={{ width: '130px' }}
+
                     />
                     <div className="input-visible">
                       {formData.pacienteDataNasc || '‎'.repeat(10)}
                     </div>
                   </div>
                 </div>
-
-                {/* Separador */}
-                <span className="">|</span>
-
+                <span>|</span>
                 {/* Campo Telefone */}
                 <div className="d-flex align-items-end ms-1 w-50">
                   <label className="">Telefone</label>
@@ -332,7 +325,8 @@ const FormularioOdontologico = () => {
                       onChange={handlePhoneChange}
                       className="input-hidden"
                       placeholder="(00) 00000-0000"
-                      style={{ width: '130px' }} // Ajuste conforme necessário
+                      maxLength="14"
+                      style={{ width: '130px' }}
                     />
                     <div className="input-visible">
                       {formData.pacienteTelefone || '‎'.repeat(14)} {/* Espaços invisíveis para manter o tamanho */}
@@ -348,17 +342,16 @@ const FormularioOdontologico = () => {
 
           <div class="form-row-enviar-mais">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required />
-              <label class="form-check-label" for="disabledFieldsetCheck">
+              <input type="checkbox" id="checkboxNoLabel" aria-label="..." />
+              <label class="form-check-label" for="checkboxNoLabel">
                 Enviar mais um formulário
               </label>
             </div>
           </div>
-          <div className="form-row">
 
+          <div className="form-row">
             <div className="d-flex align-items-end" style={{ borderBottom: '1px solid #08395F' }}>
               <label className='text-nome'>Nome:</label>
-
               <div className="nome-input-container">
                 <input
                   type="text"
@@ -379,7 +372,7 @@ const FormularioOdontologico = () => {
               />
             </div>
 
-            <div className="form-group" style={{ borderBottom: '1px solid #08395F' }}>
+            <div className="form-group form-group-especialidade" style={{ borderBottom: '1px solid #08395F' }}>
               <label>Especialidade:</label>
               <input
                 className='input-text'
@@ -390,82 +383,73 @@ const FormularioOdontologico = () => {
               />
             </div>
           </div>
+          {/* Endereço e Contato */}
+          <div className="form-row">
+            <div className="form-group form-group-endereco " style={{ borderBottom: '1px solid #08395F' }}>
+              <label>Endereço:</label>
+              <input
+                className='input-text'
+                type="text"
+                name="endereco"
+                value={formData.endereco}
+                onChange={handleChange}
+              />
+            </div>
+          </div>
+          <div className="form-row">
+            <div className="form-group form-group-cidade" style={{ borderBottom: '1px solid #08395F' }}>
+              <div className="d-flex align-items-end">
+                <label>Cidade:</label>
+                <input
+                  type="text"
+                  name="cidade"
+                  value={formData.cidade}
+                  onChange={handleChange}
+                />
+                <span>|</span>
 
-          <div className="form-group" style={{ borderBottom: '1px solid #08395F' }}>
-            <label>Endereço:</label>
+                <label>CEP:</label>
+                <input
+                  className='input-cep'
+                  type="text"
+                  name="cep"
+                  value={formData.cep}
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="form-group form-group-telefone" style={{ borderBottom: '1px solid #08395F' }}>
+            <label>Telefone:</label>
             <input
               className='input-text'
               type="text"
-              name="endereco"
-              value={formData.endereco}
+              name="profissionalTelefone"
+              value={formData.profissionalTelefone}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="form-group form-group-email" style={{ borderBottom: '1px solid #08395F' }}>
+            <label>E-mail:</label>
+            <input
+              className='input-text'
+              type="email"
+              name="email"
+              value={formData.email}
               onChange={handleChange}
             />
           </div>
 
-          <div className="form-group form-group-endereco" style={{ borderBottom: '1px solid #08395F' }}>
-            <div className="form-group-endereco">
-              <label>Cidade:</label>
-              <input
-
-                type="text"
-                name="cidade"
-                value={formData.cidade}
-                onChange={handleChange}
-              />
-              <span>|</span>
-              <label>CEP:</label>
-              <input
-
-                type="text"
-                name="cep"
-                value={formData.cep}
-                onChange={handleChange}
-              />
-            </div>
-          </div>
-          <div className="form-row form-row-contato">
-            <div className="form-group form-group-contato">
-              <label>Telefones:</label>
-              <input
-                className='input-text'
-                type="tel"
-                name="telefones"
-                value={formData.telefones}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="form-group form-group-contato">
-              <label>E-mail:</label>
-              <input
-                className='input-text'
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-              />
-            </div>
-          </div>
-
-
           {/* Exame */}
           <h4 className='form-titulo'>Exame</h4>
-          <div className="form-row">
-            <div className="form-group" style={{ gridColumn: 'span 3' }}>
-              <label>Exame:</label>
-              <input
-                type="text"
-                name="exame"
-                value={formData.exame}
-                onChange={handleChange}
-              />
-            </div>
-          </div>
 
           {/* Finalidade */}
-          <div className="form-row">
-            <div className="form-group" style={{ gridColumn: 'span 3' }}>
+          <div>
+            <div className="form-group form--" style={{ borderBottom: '1px solid #08395F' }}>
               <label>Finalidade:</label>
-              <textarea
+              <input
+                className='input-text'
+                type="text"
                 name="finalidade"
                 value={formData.finalidade}
                 onChange={handleChange}
@@ -474,10 +458,12 @@ const FormularioOdontologico = () => {
           </div>
 
           {/* Atenção especial */}
-          <div className="form-row">
-            <div className="form-group" style={{ gridColumn: 'span 3' }}>
+          <div>
+            <div className="form-group form--" style={{ borderBottom: '1px solid #08395F' }}>
               <label>Atenção especial para:</label>
-              <textarea
+              <input
+                type="text"
+                className='input-text'
                 name="atencaoEspecial"
                 value={formData.atencaoEspecial}
                 onChange={handleChange}
@@ -486,58 +472,107 @@ const FormularioOdontologico = () => {
           </div>
 
           {/* Observações clínicas */}
-          <div className="form-row">
-            <div className="form-group" style={{ gridColumn: 'span 3' }}>
-              <label>Observações clínicas:</label>
+          <div style={{
+            padding: '0 0 15px 0',
+          }}>
+            <label style={{
+              display: 'block',
+              marginBottom: '5px',
+            }}>Observações clínicas:</label>
+
+            <div style={{
+              position: 'relative',
+              paddingLeft: '10px'
+            }}>
+              {/* Linhas guia */}
+              <div style={{
+                position: 'absolute',
+                left: 0,
+                right: 0,
+                top: '0',
+                height: '100%',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                pointerEvents: 'none'
+              }}>
+                <div style={{ borderBottom: '1px solid #08395F', width: '100%' }}></div>
+                <div style={{ borderBottom: '1px solid #08395F', width: '100%' }}></div>
+                <div style={{ borderBottom: '1px solid #08395F', width: '100%' }}></div>
+
+              </div>
+
+              {/* Área de texto */}
               <textarea
                 name="observacoes"
                 value={formData.observacoes}
                 onChange={handleChange}
+                style={{
+                  width: '100%',
+                  border: 'none',
+                  outline: 'none',
+                  resize: 'none',
+                  height: '50px',
+
+                }}
+                rows={3}
               />
             </div>
           </div>
 
           {/* Autorização */}
-          <div className="autorizacao">
-            <label>
-              <input
-                type="checkbox"
-                name="autorizacao"
-                checked={formData.autorizacao}
-                onChange={handleChange}
-              />
-              Autoriza eventual complementação necessária a critério do Radiologista
-            </label>
-          </div>
 
-          {/* Data e assinatura */}
           <div className="form-row">
-            <div className="form-group">
-              <label>Data:</label>
-              <input
-                type="date"
-                name="data"
-                value={formData.data}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="form-group">
-              <label>Assinatura:</label>
-              <input
-                type="text"
-                name="assinatura"
-                value={formData.assinatura}
-                onChange={handleChange}
-              />
-            </div>
-          </div>
+            <div className="form-group form-group-autorizacao" style={{ bordertop: '1px solid #08395F' }}>
+              <div class="form-check">
+                <label for="checkboxNoLabel">
+                  <input type="checkbox" />
+                  Autoriza eventual complementação necessária a critério do Radiologista
+                </label>
+              </div>
 
-          {/* Rodapé com informações de contato */}
-          <div className="footer">
-            <p>Atendimento e Agendamento de Exames</p>
-            <p>Telefone 11 4127-8757 | On-line craneum.com.br</p>
+
+
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
+                  <label class="form-check-label" for="defaultCheck1">
+                  Autoriza eventual complem entação necessária a critério do Radiologista
+                </label>
+
+              </div>
+            </div>
+
+
+
+            {/* Data e assinatura */}
+            <div className="form-row">
+              <div className="form-group">
+                <label>Data:</label>
+                <input
+                  type="date"
+                  name="data"
+                  value={formData.data}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="form-group">
+                <label>Assinatura:</label>
+                <input
+                  type="text"
+                  name="assinatura"
+                  value={formData.assinatura}
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+
+            {/* Rodapé com informações de contato */}
+            <div className="footer">
+              <p>Atendimento e Agendamento de Exames</p>
+              <p>Telefone 11 4127-8757 | On-line craneum.com.br</p>
+            </div>
+            {/* Closing tag for grancum-form-container */}
           </div>
-          {/* Closing tag for grancum-form-container */}
         </div>
       </form>
     </div>
