@@ -640,14 +640,30 @@ const FormularioOdontologico = () => {
 
           {/* Rodapé com informações de contato */}
           <div className="footer">
-            <div className="titulo-com-linha">
-              Atendimento e Agendamento de Exames
+            <div className="footer-header mb-1">
+              <div className="titulo-com-linha">
+                Atendimento e Agendamento de Exames
+              </div>
+            </div>
+            <div className="footer-content">
+              <div className="footer-bloco">
+                <span>Telefone</span>
+                <p>11 4127-8757</p>
+              </div>
+              <div className="footer-bloco">
+                <span>On-line</span>
+                <p>craneum.com.br</p>
+              </div>
             </div>
 
-            <p>Telefone 11 4127-8757 | On-line craneum.com.br</p>
-          </div>
-          {/* Closing tag for grancum-form-container */}
+            <div className="footer-bloco">
+              <strong>"VALORES ESTIMADOS POR TELEFONE ESTÃO SUJEITOS A CONFIRMAÇÃO NO ATENDIMENTO</strong>
+              </div>
 
+
+            {/* Closing tag for grancum-form-container */}
+
+          </div>
         </div>
       </form>
     </div>
