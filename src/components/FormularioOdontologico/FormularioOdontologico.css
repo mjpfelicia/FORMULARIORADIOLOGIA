@@ -223,7 +223,7 @@
 
 .grancum-header h2 {
   margin: 0 0 0.2rem 0;
-  font-size: 80% !important;
+  font-size: 100% !important;
   font-weight: 600;
   font-size: large;
   color: var(--verde-claro);
@@ -528,25 +528,7 @@
   color: var(--azul-claro);
 }
 
-.form-group-autorizacao {
 
-  white-space: nowrap;
-  padding: 0!important;
-  
-}
-.form-group-autorizacao label {
-  font-weight: bold;
-  color: var(--azul-claro)!important;
-  margin-bottom: 0.5rem;
-}
-.form-group-autorizacao input[type="checkbox"] {
-
-  padding: 0!important;
-}
-
-.form-row-enviar-mais label {
-  color: var(--azul-claro) !important;
-}
 
 
 /* Esconde o checkbox original */
@@ -565,6 +547,17 @@
 
 /* Cria o quadrado antes do texto (checkbox visual) */
 .form-row-enviar-mais .form-check-label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 15px;
+  height: 15px;
+  border: 2px solid var(--azul-claro);
+  background: white;
+}
+
+.form-group-autorizacao .form-check-label::before {
   content: "";
   position: absolute;
   left: 0;
@@ -594,37 +587,76 @@
   transform: rotate(45deg);
   /* Gira para formar o ✓ */
 }
-
-
-.autorizacao {
-  margin-bottom: var(--espaco-md);
-  font-size: var(--fonte-sm);
-  user-select: none;
-}
-
-.autorizacao label {
-  cursor: pointer;
+/* Container de checkbox para autorização */
+.container-autorizacao-radiologia {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.5rem;
+   margin-bottom: var(--espacamento-medio);
 }
 
-.autorizacao input[type="check;box"] {
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
+/* Texto da label da autorização */
+.label-autorizacao-radiologia {
+  font-weight: bold;
+  font-size: 70%!important;
+  color: var(--azul-claro)!important;
 }
+
+/* Estilo do checkbox com borda azul */
+.checkbox-autorizacao-input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  padding: 0!important;
+  border: 2px solid var(--azul-claro)!important;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+}
+
+/* Estilo ao marcar o checkbox */
+.checkbox-autorizacao-input:checked {
+  background-color: #007BFF;
+}
+
+/* Checkmark (✔️) branco dentro do checkbox */
+.checkbox-autorizacao-input:checked::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 4px;
+  height: 8px;
+  border: solid var(--azul-claro);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
 
 .footer {
-  margin-top: var(--espaco-xl);
   font-size: var(--fonte-sm);
   text-align: center;
   color: var(--cinza-texto);
 }
+.footer-content{
+width: 100%;
 
-.footer p {
-  margin: 0.2rem 0;
+ 
 }
+.titulo-com-linha {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--verde-claro);
+  border-bottom: 1px solid var(--verde-claro); /* ou sua variável azul */
+
+  margin-bottom: 1rem;
+}
+
+
+
 
 .submit-button {
   margin-top: var(--espaco-lg);

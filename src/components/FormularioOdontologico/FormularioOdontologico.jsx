@@ -99,7 +99,6 @@ const FormularioOdontologico = () => {
 
         {/* 
           COLUNA 1: secao-checkbox 
-          Contém os grupos de checkbox do LAB 3D, Impressão de Modelo e demais modelos.
         */}
         <div className="secao-checkbox col-4">
           <div className="box-checkbox">
@@ -473,7 +472,7 @@ const FormularioOdontologico = () => {
 
           {/* Observações clínicas */}
           <div style={{
-            padding: '0 0 15px 0',
+            padding: '0 0 5px 0',
           }}>
             <label style={{
               display: 'block',
@@ -521,58 +520,134 @@ const FormularioOdontologico = () => {
           </div>
 
           {/* Autorização */}
-
-          <div className="form-row">
-            <div className="form-group form-group-autorizacao" style={{ bordertop: '1px solid #08395F' }}>
-              <div class="form-check">
-                <label for="checkboxNoLabel">
-                  <input type="checkbox" />
-                  Autoriza eventual complementação necessária a critério do Radiologista
-                </label>
-              </div>
-
-
-
-              <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" />
-                  <label class="form-check-label" for="defaultCheck1">
-                  Autoriza eventual complem entação necessária a critério do Radiologista
-                </label>
-
-              </div>
+          <div className="form-group">
+            <div className="container-autorizacao-radiologia">
+              <input type="checkbox" id="checkboxAutorizacao" className="checkbox-autorizacao-input" />
+              <label htmlFor="checkboxAutorizacao" className="label-autorizacao-radiologia">
+                Autoriza eventual complementação necessária a critério do Radiologista
+              </label>
             </div>
+          </div>
 
+          {/* Data e Assinatura */}
+          <div
+            className="form-row"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              flexDirection: "Row",
+              justifyContent: "Center",
+              marginTop: 20,
 
-
-            {/* Data e assinatura */}
-            <div className="form-row">
-              <div className="form-group">
-                <label>Data:</label>
-                <input
-                  type="date"
-                  name="data"
-                  value={formData.data}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="form-group">
-                <label>Assinatura:</label>
+            }}
+          >
+            {/* Campo Data */}
+            <div
+              className="form-group"
+              style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+            >
+              <div style={{ display: "flex", alignItems: "center" }}>
                 <input
                   type="text"
-                  name="assinatura"
-                  value={formData.assinatura}
+                  name="dia"
+                  maxLength={2}
+                  placeholder=""
+                  value={formData.dia || ""}
                   onChange={handleChange}
+                  style={{
+                    width: 30,
+                    border: "none",
+                    padding: 0,
+                    borderBottom: "1px solid rgb(60, 49, 49)",
+                    textAlign: "center",
+
+                    outline: "none",
+                  }}
                 />
+                {/* Barra vertical */}
+                <span style={{ color: "rgb(60, 49, 49)" }}>|</span>
+
+                <input
+                  type="text"
+                  name="mes"
+                  maxLength={2}
+                  placeholder=""
+                  value={formData.mes || ""}
+                  onChange={handleChange}
+                  style={{
+                    width: 30,
+                    border: "none",
+                    padding: 0,
+                    borderBottom: "1px solid rgb(60, 49, 49)",
+                    textAlign: "center",
+                    outline: "none",
+                  }}
+                />
+                {/* Barra vertical */}
+                <span style={{ color: "rgb(60, 49, 49)" }}>|</span>
+
+                <input
+                  type="text"
+                  name="ano"
+                  maxLength={4}
+                  placeholder=""
+                  value={formData.ano || ""}
+                  onChange={handleChange}
+                  style={{
+                    width: 50,
+                    border: "",
+                    padding: 0,
+                    borderBottom: "1px solid rgb(60, 49, 49)",
+                    textAlign: "center",
+                    fontSize: 18,
+                    outline: "none",
+                  }}
+                />
+              </div>
+              <label>Data:</label>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  fontSize: 12,
+                  color: "rgb(60, 49, 49)",
+                  width: 100,
+                }}
+              >
+
               </div>
             </div>
 
-            {/* Rodapé com informações de contato */}
-            <div className="footer">
-              <p>Atendimento e Agendamento de Exames</p>
-              <p>Telefone 11 4127-8757 | On-line craneum.com.br</p>
+            {/* Campo Assinatura */}
+            <div
+              className="form-group"
+              style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+            >
+
+              <div
+                style={{
+                  borderBottom: "1px solid rgb(60, 49, 49)",
+                  width: 250,
+                  height: 24,
+                  marginTop: 4,
+                }}
+              >
+
+              </div>
+              <label>Assinatura:</label>
             </div>
-            {/* Closing tag for grancum-form-container */}
           </div>
+
+          {/* Rodapé com informações de contato */}
+          <div className="footer">
+            <div className="titulo-com-linha">
+              Atendimento e Agendamento de Exames
+            </div>
+
+            <p>Telefone 11 4127-8757 | On-line craneum.com.br</p>
+          </div>
+          {/* Closing tag for grancum-form-container */}
+
         </div>
       </form>
     </div>
