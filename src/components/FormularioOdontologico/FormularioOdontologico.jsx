@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './FormularioOdontologico.css';
 import CustomCheckbox from '../CustomCheckbox/CustomCheckbox';
-import LocalizacaoClinica from '../LocalizacaoClinica/LocalizacaoClinica';
+import LocalizacaoComInfo from '../LocalizacaoClinica/LocalizacaoClinica';
+import logo from '../../images/logo-grancum.png';
 
 const FormularioOdontologico = () => {
   // Estado único do formulário
@@ -253,18 +254,56 @@ const FormularioOdontologico = () => {
           Apresenta as informações das unidades/endereços.
         */}
         <div className="unidades-container col-4">
-          <LocalizacaoClinica />
-          <LocalizacaoClinica />
-          <LocalizacaoClinica />
+          <LocalizacaoComInfo
+            titulo="São Bernardo (centro)"
+            endereco="Rua Carlos Gomes, 165"
+            cidade="São Bernardo do Campo - SP"
+            mapaSrc="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.694257799105!2d-46.5480889850229!3d-23.50721796589102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce42661040a3ff%3A0xf93b5ccf59d09b88!2sR.%20Carlos%20Gomes%2C%20165%20-%20Centro%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1621616000000!5m2!1spt-BR!2sbr"
+            textoAcessibilidade="Acessibilidade Total Estacionamento próprio e para ambulância"
+            unidade="Unidade São Bernardo"
+            crosp="CROSP-CL 3088"
+            responsavel="Dr. Felicio Bento Zampieri"
+            crospResponsavel="CROSP 2553"
+            mostrarIcone={true} // mostra o ícone aqui
+          />
+
+          <LocalizacaoComInfo
+            titulo="SANTO ANDRÉ (CENTRO)"
+            endereco="Rua Álvares de Azevedo 154"
+            cidade="SANTO ANDRÉ"
+            mapaSrc="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.123456789!2d-46.6200000000!3d-23.6800000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce123456789abc%3A0xabcdef1234567890!2sAv.%20Pres.%20Kennedy%2C%20123%20-%20Diadema%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1234567890000!5m2!1spt-BR!2sbr"
+            textoAcessibilidade="Acessibilidade parcial: consulte-nos. Estacionamento conveniado."
+            unidade="Unidade Santo André"
+            crosp="CROSP-CL 3549"
+            responsavel="Dr. Felicio Sétimo Rossi Zampieri"
+            crospResponsavel="CROSP 32786"
+            mostrarIcone={false}
+            inforStongPos="acima" // <-- Adicione isso aqui!
+          />
+
+          <LocalizacaoComInfo
+            titulo="Av. República do Líbano, 2139"
+            endereco="Rua da Mooca, 500"
+            cidade="São Paulo - SP"
+            mapaSrc="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.654321098!2d-46.5760000000!3d-23.5500000000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce432109876543%3A0x0987654321fedcba!2sRua%20da%20Mooca%2C%20500%20-%20São%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v0987654321000!5m2!1spt-BR!2sbr"
+            textoAcessibilidade="Acessibilidade parcial: consulte-nos. Estacionamento próprio."
+            unidade="Unidade São Paulo"
+            crosp="CROSP-CL 3492"
+            responsavel="Dr. Maria Paula Canali"
+            crospResponsavel="CROSP 35228"
+            mostrarIcone={false}
+            inforStongPos="acima" // não mostra o ícone aqui
+          />
+
         </div>
+
 
         {/* 
           COLUNA 3: grancum-form-container 
          */}
         <div className="grancum-form-container col-4">
           <div className="grancum-header">
-            <h1>GRANÇUM</h1>
-            <h2>RADIOLOGIA E DOCUMENTAÇÃO ODONTOLÓGICA</h2>
+            <img src={logo} alt="Logo Grancum" className="logo-grancum" />
           </div>
 
           <h3>SOLICITAÇÃO DE EXAMES</h3>
@@ -657,8 +696,8 @@ const FormularioOdontologico = () => {
             </div>
 
             <div className="footer-bloco">
-              <strong>"VALORES ESTIMADOS POR TELEFONE ESTÃO SUJEITOS A CONFIRMAÇÃO NO ATENDIMENTO</strong>
-              </div>
+              <strong>"Valeres estimados por telefeno estão sujeitos a confirmação na Atendimento"</strong>
+            </div>
 
 
             {/* Closing tag for grancum-form-container */}

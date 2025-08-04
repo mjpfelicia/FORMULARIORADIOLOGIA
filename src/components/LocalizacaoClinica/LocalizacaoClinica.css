@@ -1,25 +1,22 @@
 .localizacao-container {
   display: flex;
   justify-content: center;
-  padding: 1rem;
-  background-color: #f9f9f9;
+  padding-left: 1rem;
 }
 
 .mapa-com-info {
   display: flex;
+
   max-width: 800px;
   width: 100%;
-
   overflow: hidden;
-  height: 300px;;
- 
+  height: 250px;
 }
 
 .mapa {
   flex: 2;
   min-width: 200px;
-    height: 100%;
-
+  height: 100%;
 }
 
 .mapa iframe {
@@ -30,20 +27,70 @@
 
 .info-lateral {
   flex: 1;
-  background-color: #fff;
-  padding: 1rem;
   font-size: 0.95rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  border-left: 1px solid #ddd;
+  justify-content: space-between;
+  margin-left: 0.rem;
 }
 
-.info-lateral p {
-  margin: 0.3rem 0;
+.info-lateral-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+.info-lateral-content p {
+  margin: 0;
+  color: var(--azul-texto);
+  font-weight: bold;
+  font-size: 0.7rem;
+  line-height: 1.2;
+}
+
+.infor-stong {
+  position: absolute; 
+
+  right: 42rem;     
+  background: var(--verde-claro);
+  padding: 1rem;
+  text-align: center;
+  color: var(--azul-texto);
+  font-size: 0.85rem;
+  z-index: 10;
+  max-width: 150px;   
+  box-sizing: border-box;
+}
+.infor-stong {
+  display: block;
+  background: var(--verde-claro);
+  padding: 1rem;
+  text-align: center;
+  color: var(--azul-texto);
+  font-size: 0.85rem;
+  margin: 1rem 0;
+  border-radius: 4px;
+}
+
+/* Posição 'acima' fica com margin-bottom para separar da info-lateral-end */
+.infor-stong.acima {
+  margin-bottom: 1rem;
+}
+
+
+.info-lateral-end p {
+  color: var(--verde-claro) !important;
+  font-weight: lighter;
+  margin: 0;
+  font-size: 0.7rem;
   line-height: 1.3;
 }
 
-.espaco {
-  margin: 0.8rem 0;
+.titulo-Localizacao {
+  font-weight: 600;
+  color: var(--verde-claro);
+  padding-left: 1rem;
+  margin-top: 1rem;
+  font-size: 1.4rem;
 }

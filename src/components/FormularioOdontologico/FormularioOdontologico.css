@@ -1,7 +1,11 @@
 /* ============ VARIÁVEIS ============ */
 :root {
   /* Tipografia */
-  --fonte-base: 100%/1.5 sans-serif, Arial;
+  --fonte-base: "Open Sans", sans-serif;
+  --fonte-secundaria: Arial, sans-serif;
+  --fonte-titulo: "Open Sans", sans-serif;
+  --fonte-titulo-secundario: "Open Sans", sans-serif;
+    font: normal 14px var(--fonte-base);
 
   /* Cores */
   --verde-principal: #00A650;
@@ -50,9 +54,12 @@
   --sombra-md: 0 0 10px rgb(0 0 0 / 0.05);
 }
 
+
+
+
 /* ============ ESTRUTURA PRINCIPAL ============ */
 .formulario-container {
-  padding: var(--espaco-md);
+  padding: var(--espaco-sm);
   font-family: sans-serif, Arial;
   color: var(--cinza-texto-2);
 }
@@ -225,7 +232,7 @@
   margin: 0 0 0.2rem 0;
   font-size: 100% !important;
   font-weight: 600;
-  font-size: 80%!important;
+  font-size: 80% !important;
   color: var(--verde-claro);
   white-space: nowrap;
 }
@@ -587,19 +594,20 @@
   transform: rotate(45deg);
   /* Gira para formar o ✓ */
 }
+
 /* Container de checkbox para autorização */
 .container-autorizacao-radiologia {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-   margin-bottom: var(--espacamento-medio);
+  margin-bottom: var(--espacamento-medio);
 }
 
 /* Texto da label da autorização */
 .label-autorizacao-radiologia {
   font-weight: bold;
-  font-size: 70%!important;
-  color: var(--azul-claro)!important;
+  font-size: 70% !important;
+  color: var(--azul-claro) !important;
   white-space: nowrap;
 }
 
@@ -609,8 +617,8 @@
   -webkit-appearance: none;
   width: 15px;
   height: 15px;
-  padding: 0!important;
-  border: 2px solid var(--azul-claro)!important;
+  padding: 0 !important;
+  border: 2px solid var(--azul-claro) !important;
   border-radius: 4px;
   cursor: pointer;
   position: relative;
@@ -635,8 +643,8 @@
   transform: rotate(45deg);
 }
 
-  /* ============ FOOTER ============ */
-  
+/* ============ FOOTER ============ */
+
 
 .footer {
   text-align: center;
@@ -651,10 +659,11 @@
   border-bottom: 1px solid var(--verde-claro);
   margin-bottom: 1rem;
 }
+
 .footer-content {
   display: flex;
-  gap: 2rem; 
-  justify-content: space-evenly; 
+  gap: 2rem;
+  justify-content: space-evenly;
   align-items: flex-start;
 }
 
@@ -663,7 +672,7 @@
   flex-direction: column;
   text-align: center;
   font-family: Arial, sans-serif;
- 
+
 }
 
 .footer-bloco span {
@@ -675,14 +684,15 @@
 .footer-bloco p {
   color: var(--verde-claro);
   white-space: nowrap;
- margin:0 0 0.4rem 0;
+  margin: 0 0 0.4rem 0;
 
 
 }
+
 .footer-bloco strong {
   color: var(--azul-claro);
   font-size: 52%;
- 
+
 }
 
 
