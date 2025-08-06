@@ -13,10 +13,11 @@ const LocalizacaoComInfo = ({
   responsavel,
   crospResponsavel,
   mostrarIcone = true,
+  infoStrongPos = 'meio',
 }) => {
   return (
     <>
-      <h1 className="titulo-Localizacao">{titulo}</h1>
+      <h1 className="titulo-localizacao">{titulo}</h1>
       <div className="localizacao-container">
         <div className="mapa-com-info">
           <div className="mapa">
@@ -26,32 +27,35 @@ const LocalizacaoComInfo = ({
               width="100%"
               height="450"
               style={{ border: 0 }}
-              allowFullScreen=""
+              allowFullScreen
               loading="lazy"
-            ></iframe>
+            />
           </div>
 
           <div className="info-lateral">
-            <div className="info-lateral-content">
-              {mostrarIcone && (
-                <div className="info-lateral">
-                  <IconeAcessibilidade />
-                </div>
-              )}
-              <p>{textoAcessibilidade}</p>
+            {mostrarIcone && textoAcessibilidade && (
+              <div className="info-acessibilidade com-icone">
+                <IconeAcessibilidade />
+                <p>{textoAcessibilidade}</p>
+              </div>
+            )}
+
+            <div className={`info-strong ${infoStrongPos}`}>
+              {endereco}
             </div>
 
-            <div className="info-lateral">
-              <strong className="infor-stong">{endereco}</strong>
-            </div>
+            {!mostrarIcone && textoAcessibilidade && (
+              <div className="info-acessibilidade sem-icone">
+                <p>{textoAcessibilidade}</p>
+              </div>
+            )}
 
             <div className="info-lateral-end">
               <p>{unidade}</p>
               <p>{crosp}</p>
               <p>
                 sob responsabilidade técnica do<br />
-                {responsavel}
-                <br />
+                {responsavel}<br />
                 {crospResponsavel}
               </p>
             </div>
@@ -61,4 +65,5 @@ const LocalizacaoComInfo = ({
     </>
   );
 };
+
 export default LocalizacaoComInfo;

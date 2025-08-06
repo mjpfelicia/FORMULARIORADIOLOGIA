@@ -595,11 +595,11 @@ const FormularioOdontologico = () => {
                   onChange={handleChange}
                   style={{
                     width: 30,
+                    height: 24,
                     border: "none",
                     padding: 0,
                     borderBottom: "1px solid rgb(60, 49, 49)",
                     textAlign: "center",
-
                     outline: "none",
                   }}
                 />
@@ -634,6 +634,7 @@ const FormularioOdontologico = () => {
                   onChange={handleChange}
                   style={{
                     width: 50,
+                    height: 24,
                     border: "",
                     padding: 0,
                     borderBottom: "1px solid rgb(60, 49, 49)",

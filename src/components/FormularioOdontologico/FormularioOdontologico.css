@@ -15,6 +15,7 @@
   --verde-label: #0BA957;
   --azul-principal: #0095DA;
   --azul-claro: #4DB4E4;
+  
   --azul-escuro: #08395F;
   --azul-texto: #09395F;
   --azul-medio: #004080;
@@ -176,11 +177,11 @@
 /* ============ SEÇÃO UNIDADES ============ */
 .unidades-container {
   background: var(--branco);
-
   border-radius: var(--borda-radius-md);
   box-shadow: var(--sombra-md);
   display: flex;
   flex-direction: column;
+  padding: var(--espaco-md);
 
 }
 

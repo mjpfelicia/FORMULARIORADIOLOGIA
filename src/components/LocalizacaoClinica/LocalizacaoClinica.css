@@ -1,18 +1,21 @@
+
+
+/* Container principal */
 .localizacao-container {
   display: flex;
   justify-content: center;
-  padding-left: 1rem;
 }
 
+/* Container do mapa e info lado a lado */
 .mapa-com-info {
   display: flex;
-
   max-width: 800px;
   width: 100%;
   overflow: hidden;
   height: 250px;
 }
 
+/* Mapa ocupa 2/3 */
 .mapa {
   flex: 2;
   min-width: 200px;
@@ -25,23 +28,72 @@
   border: none;
 }
 
+/* Lateral de informações */
 .info-lateral {
   flex: 1;
   font-size: 0.95rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin-left: 0.rem;
+  justify-content: flex-start;
+  margin-left: 0;
+  padding: 0.5rem;
 }
 
-.info-lateral-content {
+/* Estilo da info-strong com controle de posição */
+.info-strong {
+  background: var(--verde-claro);
+  padding: 1rem;
+  text-align: center;
+  color: var(--azul-texto);
+  font-size: 0.85rem;
+  order: 0;
+
+}
+
+
+
+/* Posição padrão (meio) */
+.info-strong.meio {
+  order: 0;
+  position: relative;
+  right: 5rem;
+  z-index: 5;
+}
+
+.info-acessibilidade.com-icone {
+  display: flex;
+  gap: 0.5rem;
+  color: var(--azul-texto);
+  font-weight: bold;
+  font-size: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+.info-acessibilidade.sem-icone {
+  color: var(--verde-claro);
+  font-weight: normal;
+  font-size: 0.7rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+/* Posicionar abaixo */
+.info-strong.embaixo {
+  order: 1;
+  margin-top: 1rem;
+  align-self: flex-end;
+  /* alinha à direita */
+}
+
+/* Estilo para o bloco de acessibilidade */
+.info-acessibilidade {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  gap: 0.5rem;
 }
 
-
-.info-lateral-content p {
+.info-acessibilidade p {
   margin: 0;
   color: var(--azul-texto);
   font-weight: bold;
@@ -49,36 +101,7 @@
   line-height: 1.2;
 }
 
-.infor-stong {
-  position: absolute; 
-
-  right: 42rem;     
-  background: var(--verde-claro);
-  padding: 1rem;
-  text-align: center;
-  color: var(--azul-texto);
-  font-size: 0.85rem;
-  z-index: 10;
-  max-width: 150px;   
-  box-sizing: border-box;
-}
-.infor-stong {
-  display: block;
-  background: var(--verde-claro);
-  padding: 1rem;
-  text-align: center;
-  color: var(--azul-texto);
-  font-size: 0.85rem;
-  margin: 1rem 0;
-  border-radius: 4px;
-}
-
-/* Posição 'acima' fica com margin-bottom para separar da info-lateral-end */
-.infor-stong.acima {
-  margin-bottom: 1rem;
-}
-
-
+/* Informações finais da lateral */
 .info-lateral-end p {
   color: var(--verde-claro) !important;
   font-weight: lighter;
@@ -87,10 +110,10 @@
   line-height: 1.3;
 }
 
-.titulo-Localizacao {
+/* Título principal */
+.titulo-localizacao {
   font-weight: 600;
   color: var(--verde-claro);
-  padding-left: 1rem;
-  margin-top: 1rem;
   font-size: 1.4rem;
 }
+
