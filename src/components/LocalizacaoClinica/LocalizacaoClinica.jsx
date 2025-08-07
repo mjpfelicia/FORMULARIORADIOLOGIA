@@ -1,4 +1,3 @@
-import React from 'react';
 import IconeAcessibilidade from '../IconeAcessibilidade/IconeAcessibilidade';
 import './LocalizacaoClinica.css';
 
@@ -25,7 +24,7 @@ const LocalizacaoComInfo = ({
               title={`mapa-${titulo}`}
               src={mapaSrc}
               width="100%"
-              height="450"
+              height="100%"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"

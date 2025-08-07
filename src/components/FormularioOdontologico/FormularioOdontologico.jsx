@@ -388,7 +388,7 @@ const FormularioOdontologico = () => {
           </div>
 
           <div className="form-row">
-            <div className="d-flex align-items-end" style={{ borderBottom: '1px solid #08395F' }}>
+            <div className="d-flex align-items-end mb-3" style={{ borderBottom: '1px solid #08395F' }}>
               <label className='text-nome'>Nome:</label>
               <div className="nome-input-container">
                 <input
@@ -576,7 +576,7 @@ const FormularioOdontologico = () => {
               alignItems: "center",
               flexDirection: "Row",
               justifyContent: "Center",
-              marginTop: 20,
+              gap: "20px",
 
             }}
           >

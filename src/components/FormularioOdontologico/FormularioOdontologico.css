@@ -5,7 +5,7 @@
   --fonte-secundaria: Arial, sans-serif;
   --fonte-titulo: "Open Sans", sans-serif;
   --fonte-titulo-secundario: "Open Sans", sans-serif;
-    font: normal 14px var(--fonte-base);
+  font: normal 14px var(--fonte-base);
 
   /* Cores */
   --verde-principal: #00A650;
@@ -15,7 +15,7 @@
   --verde-label: #0BA957;
   --azul-principal: #0095DA;
   --azul-claro: #4DB4E4;
-  
+
   --azul-escuro: #08395F;
   --azul-texto: #09395F;
   --azul-medio: #004080;
@@ -67,7 +67,7 @@
 
 .form-tres-colunas {
   display: flex;
-  ;
+  gap: var(--espaco-lg);
 }
 
 /* ============ SEÇÃO CHECKBOX ============ */
@@ -176,12 +176,14 @@
 
 /* ============ SEÇÃO UNIDADES ============ */
 .unidades-container {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+ 
   background: var(--branco);
   border-radius: var(--borda-radius-md);
   box-shadow: var(--sombra-md);
-  display: flex;
-  flex-direction: column;
-  padding: var(--espaco-md);
 
 }
 
@@ -202,7 +204,9 @@
 .grancum-form-container {
   display: flex;
   flex-direction: column;
+      justify-content: space-between;
 }
+
 
 .grancum-form-container h3 {
   margin: 0.9rem 0;
@@ -255,7 +259,7 @@
 .form-row {
   display: flex;
   flex-direction: column;
-  gap: var(--espaco-md);
+
 
 }
 
@@ -303,6 +307,7 @@
 .nome-input-container {
   position: relative;
   flex-grow: 1;
+
 }
 
 .nome-input {
@@ -452,7 +457,7 @@
 .form-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: var(--espaco-md);
+
 }
 
 .form-group input,

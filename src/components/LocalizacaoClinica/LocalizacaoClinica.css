@@ -4,15 +4,16 @@
 .localizacao-container {
   display: flex;
   justify-content: center;
+  height: 310px;
 }
 
 /* Container do mapa e info lado a lado */
 .mapa-com-info {
   display: flex;
-  max-width: 800px;
+
   width: 100%;
   overflow: hidden;
-  height: 250px;
+ 
 }
 
 /* Mapa ocupa 2/3 */
