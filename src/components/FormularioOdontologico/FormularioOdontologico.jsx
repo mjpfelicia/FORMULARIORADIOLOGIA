@@ -123,9 +123,7 @@ const FormularioOdontologico = () => {
                   onChange={handleChange}
                   disabled={false}
                 />
-
                 <div className="demaismodelos altura-grupo">
-
                   <CustomCheckbox
                     id="demaisModelos1"
                     className="checkbox-demais-modelos"
@@ -142,12 +140,10 @@ const FormularioOdontologico = () => {
                     onChange={handleChange}
                     disabled={false}
                   />
-
                 </div>
               </div>
               <div className="col-6 h-100">
                 <div className="group1 altura-grupo">
-
                   <CustomCheckbox
                     id="maxila"
                     label="Maxila"
@@ -162,31 +158,20 @@ const FormularioOdontologico = () => {
                     onChange={handleChange}
                     disabled={false}
                   />
-
                   <CustomCheckbox
                     id="mandibula"
                     label="Mandíbula"
                     checked={formData.mandibula}
                     onChange={handleChange}
                   />
-
                   <CustomCheckbox
                     id="mandibulaTotal"
                     label="Mandíbula Total"
                     checked={formData.mandibulaTotal}
                     onChange={handleChange}
                   />
-
                   <div className="outra">
-
                     <label className="checkbox-outra">Outra</label>
-                    <input
-                      type="checkbox"
-                      name="outro"
-                      checked={formData.outro}
-                      onChange={handleChange}
-                      className='input-outra'
-                    />
                   </div>
                 </div>
                 <div className="group2 altura-grupo">

@@ -84,7 +84,6 @@
   order: 1;
   margin-top: 1rem;
   align-self: flex-end;
-  /* alinha à direita */
 }
 
 /* Estilo para o bloco de acessibilidade */
@@ -116,5 +115,7 @@
   font-weight: 600;
   color: var(--verde-claro);
   font-size: 1.4rem;
+  text-transform: uppercase;
+  
 }
 
