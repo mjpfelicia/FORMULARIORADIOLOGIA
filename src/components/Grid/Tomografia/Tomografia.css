@@ -1,0 +1,13 @@
+#tomografia {
+    height: 100%;
+
+    header{
+        height: 10%;
+    }
+
+    main {
+        background-color: #F1F6DF;
+        height: 90%;
+
+    }
+}

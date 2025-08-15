@@ -1,0 +1,25 @@
+#radiografia {
+    background-color: #D5E4F5;
+    height: 100%;
+}
+
+#radiografia header {
+    height: 1.5rem;
+    background-color: var(--azul);
+}
+
+#radiografia .titulo{
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+}
+
+.titulo-nome{
+    width: 30%;
+
+}
+
+.titulo-espaco{
+    width: 70%;
+    background-color: var(--azul);
+}

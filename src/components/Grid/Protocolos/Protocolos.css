@@ -1,0 +1,13 @@
+#protocolos {
+    height: 100%;
+
+    header {
+        height: 10%;
+    }
+
+    main {
+        height: 90%;
+        background-color: #FEF2F7;
+    }
+
+}

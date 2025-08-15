@@ -1,0 +1,266 @@
+:root {
+    --verde: ##F1F6DF;
+    --verde-titulo: #A6CE39;
+    --verde-bg: #F1F6DF;
+    --azul-texto: #09395F;
+
+    --azul-principal: #0095DA;
+    --azul-claro: #4DB4E4;
+    --azul: #d5e4f5;
+    --amarelo: #ffc700;
+    --begeclaro: #fff0d9;
+    --rosa: #F6ADCD;
+    --roxo: #6B4E7B;
+}
+
+
+
+
+/* Reset de listas */
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0 !important;
+}
+
+/* Grid principal */
+.grid-container {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: end;
+    justify-items: end;
+    height: 100vh;
+    padding-top: 1rem;
+    font-family: sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+    grid-row: 1 / 4;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-right: 1rem;
+    font-weight: bold;
+    font-size: 18px;
+
+}
+
+/* Estilo para cada item da lista */
+.item-tomografia {
+    color: black;
+    font-size: 1.2rem;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.item-radiografia {
+    position: relative;
+    padding: 10px 10px 10px 15px;
+    background-color: white;
+    color: var(--azul-texto);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+
+}
+
+/* Borda deslocada à direita */
+.item-radiografia::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 88%;
+    height: 100%;
+    background-color: var(--azul-principal);
+    transform: translateX(100%);
+    z-index: 9999;
+}
+
+.item-documentacao {
+    background-color: var(--amarelo);
+    color: var(--roxo);
+    font-size: 1.1rem;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.sidebar ul li:nth-child(4) {
+    background-color: var(--roxo);
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.sidebar ul li:nth-child(5) {
+    background-color: var(--rosa);
+    color: black;
+    font-size: 0.95rem;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+/* Conteúdo geral da tomografia */
+.content-tomografia {
+    color: var(--roxo);
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    background-color: white;
+    position: relative;
+}
+
+/* Título da tomografia */
+.titulo-tomografia {
+    position: relative;
+    overflow: visible;
+    width: 100%;
+    color: white;
+    height: 30px;
+    text-align: center;
+    z-index: 2;
+}
+
+.titulo-tomografia h2 {
+    position: absolute;
+    height: 30px;
+    z-index: 2;
+    left: -127px;
+    width: calc(100% + 125px);
+    font-size: 28px;
+    margin: 0;
+    color: white;
+    background: var(--verde-titulo);
+}
+
+/* Conteúdo interno da tomografia */
+.content-tomografia {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    /* ou uma altura fixa, ex: 500px */
+}
+
+.tomografia-content {
+    position: relative;
+    flex: 1;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    background-color: var(--verde-bg);
+    z-index: 9999;
+}
+
+.tomografia-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 100%;
+    background-color: var(--verde-destaque);
+    transform: translateX(-100%);
+    z-index: 9999;
+}
+
+/* Borda inferior e lateral esquerda */
+.border-tomografia {
+    position: relative;
+    width: 95%;
+    border-bottom: 30px solid var(--azul-principal);
+    padding-left: 30px;
+    box-sizing: border-box;
+}
+
+/* Borda esquerda simulada */
+.borda-esquerda {
+    position: absolute;
+    top: 14%;
+    left: 0;
+    width: 30px;
+    height: 86%;
+    background-color: var(--azul-principal);
+    z-index: 1;
+}
+
+
+.tomografia-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 1rem;
+}
+
+.tomografia-grid ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tomografia-grid li {
+    margin-bottom: 8px;
+}
+
+.parentheses {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 8px;
+}
+
+.parentheses input[type="checkbox"] {
+    display: none;
+}
+
+.symbol {
+    width: 30px;
+    display: inline-block;
+    font-family: monospace;
+    font-weight: bold;
+    color: var(--azul-texto);
+}
+
+/* Estado padrão: ( ) */
+.parentheses input[type="checkbox"]+.symbol::before {
+    content: "( )";
+}
+
+/* Estado marcado: (✓) */
+.parentheses input[type="checkbox"]:checked+.symbol::before {
+    content: "(✓)";
+}
+
+.item-ul {
+    position: relative;
+    width: 60%;
+    padding: 20px;
+    border-right: 1px solid var(--azul-texto);
+}
+
+/* Borda superior parcial */
+.item-ul::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 85px;
+    width: 62%;
+    height: 1px;
+    background-color: var(--azul-texto);
+}
+
+/* Borda inferior parcial */
+.item-ul::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 58%;
+    height: 1px;
+    background-color: var(--azul-texto);
+}

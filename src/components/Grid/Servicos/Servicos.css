@@ -1,0 +1,13 @@
+#servicos {
+    height: 100%;
+
+    header{
+        height: 10%;
+    }
+
+    main {
+        background-color: #E4C9D9;
+        height: 90%;
+
+    }
+}

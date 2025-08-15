@@ -4,6 +4,8 @@ import CustomCheckbox from '../CustomCheckbox/CustomCheckbox';
 import LocalizacaoComInfo from '../LocalizacaoClinica/LocalizacaoClinica';
 import logo from '../../images/logo-grancum.png';
 
+
+
 const FormularioOdontologico = () => {
   // Estado único do formulário
   const [formData, setFormData] = useState({
@@ -60,13 +62,15 @@ const FormularioOdontologico = () => {
   });
 
   // Função principal de manipulação de mudanças
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: type === 'checkbox' ? checked : value
-    }));
-  };
+ const handleChange = (e) => {
+  const { id, name, value, type, checked } = e.target;
+  const field = id || name;
+  
+  setFormData(prev => ({
+    ...prev,
+    [field]: type === 'checkbox' ? checked : value
+  }));
+};
 
   // Função específica para formatar data
   const handleDateChange = (e) => {
@@ -107,6 +111,7 @@ const FormularioOdontologico = () => {
             <div className="checkbox-container">
               <div className="col-6">
 
+                
                 <CustomCheckbox
                   id="prototipagem"
                   className="checkbox-prototipagem altura-grupo"
@@ -207,6 +212,8 @@ const FormularioOdontologico = () => {
                 </div>
               </div>
             </div>
+
+
 
             {/* Grupo Prototipagem */}
 
