@@ -1,6 +1,6 @@
 import "./Grid.css";
 
-const Grid = ({ tomografia, radiologia, documentacao, protocolos }) => {
+const Grid = ({ tomografia, radiologia, documentacao, protocolos, servicos }) => {
     return (
         <div class="parent">
             <div class="verde1 titulos">
@@ -41,14 +41,13 @@ const Grid = ({ tomografia, radiologia, documentacao, protocolos }) => {
                 {<documentacao.Documentacao />}
             </div>
 
-
             <div class="rosa1 rosa">{<protocolos.Titulo/>}</div>
             <div class="rosa2 rosa">{<protocolos.Coluna/>}</div>
             <div class="rosa3 rosa">{<protocolos.Main/>}</div>
             
-            <div class="roxo1 roxo">roxo1</div>
-            <div class="roxo2 roxo"></div>
-            <div class="roxo3 roxo">roxo3</div>
+            <div class="roxo1 roxo">{<servicos.Titulo/>}</div>
+            <div class="roxo2 roxo">{<servicos.Coluna/>}</div>
+            <div class="roxo3 roxo">{<servicos.Main/>}</div>
         </div>
 
     );

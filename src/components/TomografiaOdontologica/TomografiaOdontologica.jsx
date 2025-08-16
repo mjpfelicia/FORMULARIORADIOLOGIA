@@ -1,6 +1,7 @@
 // TomografiaOdontologica.jsx
 import React from 'react';
 import './TomografiaOdontologica.css';
+import arcada1 from '../../../src/images/arcada1.png';
 
 const TomografiaOdontologica = () => {
     return (
@@ -65,6 +66,7 @@ const TomografiaOdontologica = () => {
                                     <label className="parentheses" for="outra">
                                         <input type="checkbox" id="outra" />
                                         <span className="symbol borda"></span> Outra
+                                        <input type="text" className="linha-simples" />
                                     </label>
                                 </div>
                                 <div>
@@ -133,7 +135,7 @@ const TomografiaOdontologica = () => {
                                     </ul>
 
                                     <div>
-                                        <img src="../src/images/arcada1.png" alt="Imagem da arcada dentária" />
+                                        <img src={arcada1} alt="Imagem da arcada dentária" />
                                     </div>
                                 </div>
                             </div>

@@ -264,3 +264,15 @@ li {
     height: 1px;
     background-color: var(--azul-texto);
 }
+
+
+
+.linha-simples {
+    border: none;
+    border-bottom: 1px solid var(--azul-texto);
+    background-color: transparent;
+    width: 35%;
+    height: 13px;
+    margin-left: 0.3rem;
+    outline: none;
+}

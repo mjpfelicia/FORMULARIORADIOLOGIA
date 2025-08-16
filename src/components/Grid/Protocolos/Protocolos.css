@@ -1,13 +1,17 @@
 #protocolos {
     height: 100%;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr 2fr;
 
     header {
-        height: 10%;
     }
 
     main {
-        height: 90%;
         background-color: #FEF2F7;
+        grid-row: span 3 / span 3;
+        grid-column-start: 1;
+        grid-column: span 4 / span 4;
+        grid-row-start: 2;
     }
-
 }

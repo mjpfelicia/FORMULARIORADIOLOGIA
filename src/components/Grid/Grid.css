@@ -10,8 +10,8 @@
     --amarelo: #FFCB04;
     --rosa: #F6ADCD;
     --roxo: #6B4E7B;
-    --half-space: 0.5fr;
-    --space-1: 1fr;
+    --half-space: 0.3fr;
+    --space-1: 0.7fr;
     --space-2: 2fr;
 }
 
@@ -115,7 +115,7 @@
 }
 
 .roxo2 {
-    grid-row: span 14 / span 14;
+    grid-row: span 13 / span 13;
     grid-column-start: 6;
     grid-row-start: 9;
 }

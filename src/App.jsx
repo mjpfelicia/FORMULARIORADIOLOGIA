@@ -7,9 +7,9 @@ import Grid from './components/Grid/Grid'
 
 import Radiagrafia from "./components/Grid/Radiografia/Radiagrafia";
 import Tomografia from "./components/Grid/Tomografia/Tomografia";
-
 import Documentacao from "./components/Grid/Documentacao/Documentacao"
 import Protocolos from "./components/Grid/Protocolos/Protocolos"
+import Servicos from "./components/Grid/Servicos/Servicos"
 const App = () => {
     return (
         <div>
@@ -19,6 +19,7 @@ const App = () => {
             radiologia={<Radiagrafia/>}
             documentacao={Documentacao}
             protocolos={Protocolos}
+            servicos={Servicos}
               
             />
         </div>
