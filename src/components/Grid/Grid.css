@@ -17,8 +17,8 @@
 
 .parent {
     display: grid;
-      /* Correto */
-    grid-template-columns: var(--space-2) var(--space-2) var(--space-2) var(--space-2) var(--space-2) var(--space-1) var(--half-space) var(--space-1) var(--half-space) var(--space-1) var(--half-space) var(--space-1) var(--half-space) var(--space-2) var(--half-space) var(--space-2) var(--space-2) var(--space-2) var(--space-2) var(--space-2) var(--space-2) var(--space-2) var(--space-2) var(--space-2);
+    /* Correto */
+    grid-template-columns: var(--space-1) var(--space-1) var(--space-2) var(--space-2) var(--space-2) var(--space-1) var(--half-space) var(--space-1) var(--half-space) var(--space-1) var(--half-space) var(--space-1) var(--half-space) var(--space-2) var(--half-space) var(--space-2) var(--half-space) var(--space-2) var(--space-2) var(--space-2) var(--space-2) var(--space-2) var(--space-2) var(--space-2);
     grid-template-rows: var(--space-1) var(--half-space) var(--space-1) var(--half-space) var(--space-1) var(--half-space) var(--space-1) var(--half-space) var(--space-1) var(--space-2) var(--half-space) var(--space-1) var(--space-2) var(--space-2) var(--space-2) var(--half-space) var(--space-2) var(--half-space) var(--space-1) var(--half-space) var(--space-1) var(--space-2) var(--space-2) var(--space-2);
     height: 100vh;
 }
@@ -27,7 +27,6 @@
     height: 1.5rem;
     font-size: 1rem;
     text-align: center;
-    width: 30%;
 }
 
 .verde1 {
@@ -82,9 +81,9 @@
 }
 
 .amarelo4 {
-    grid-column: span 10 / span 9;
+    grid-column: span 5 / span 7;
     grid-row: span 5 / span 5;
-    grid-column-start: 16;
+    grid-column-start: 18;
     grid-row-start: 20;
 }
 
@@ -101,10 +100,17 @@
 }
 
 .rosa3 {
-    grid-column: span 7 / span 7;
+    grid-column: span 9 / span 9;
     grid-row: span 4 / span 4;
     grid-column-start: 8;
     grid-row-start: 21;
+}
+
+.rosa4 {
+    grid-row: span 1 / span 1;
+    grid-row-start: 21;
+    grid-column: span 9 / span 9;
+    grid-column-start: 8;
 }
 
 .roxo1 {
@@ -115,7 +121,7 @@
 }
 
 .roxo2 {
-    grid-row: span 13 / span 13;
+    grid-row: span 12 / span 12;
     grid-column-start: 6;
     grid-row-start: 9;
 }
@@ -123,8 +129,15 @@
 .roxo3 {
     grid-column: span 4 / span 4;
     grid-column-start: 3;
-    grid-row: span 4 / span 4;
+    grid-row: span 3 / span 3;
+    grid-row-start: 22;
+}
+
+.roxo4 {
+    grid-row: span 1 / span 1;
     grid-row-start: 21;
+    grid-column: span 4 / span 4;
+    grid-column-start: 3;
 }
 
 .verde {
@@ -176,6 +189,5 @@
 
 .radiografia-barra {
     background-color: var(--azul);
-    height: 24px;
     width: 100%;
 }

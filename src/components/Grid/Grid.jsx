@@ -44,10 +44,12 @@ const Grid = ({ tomografia, radiologia, documentacao, protocolos, servicos }) =>
             <div class="rosa1 rosa">{<protocolos.Titulo/>}</div>
             <div class="rosa2 rosa">{<protocolos.Coluna/>}</div>
             <div class="rosa3 rosa">{<protocolos.Main/>}</div>
+            <div class="rosa4 rosa">{<protocolos.Header/>}</div>
             
             <div class="roxo1 roxo">{<servicos.Titulo/>}</div>
             <div class="roxo2 roxo">{<servicos.Coluna/>}</div>
             <div class="roxo3 roxo">{<servicos.Main/>}</div>
+            <div class="roxo4 roxo">{<servicos.Header/>}</div>
         </div>
 
     );

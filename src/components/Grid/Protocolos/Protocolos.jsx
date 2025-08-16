@@ -7,6 +7,14 @@ const Titulo = () => {
 const Coluna = () => {
     return (<></>);
 }
+
+const Header = () => {
+    return (
+        <div className="header">
+
+        </div> 
+    );
+}
 const Main = () => {
     return (
         <div id="protocolos">
@@ -21,5 +29,6 @@ const Main = () => {
 export default {
     Titulo,
     Coluna,
+    Header,
     Main,
 }
