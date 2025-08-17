@@ -1,19 +1,14 @@
 #servicos {
     height: 100%;
+    background-color: var(--roxo);
 
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr 1fr;
-    grid-template-rows: 1fr 2fr 2fr 2fr;
-
-    header {
+    .header {
+        font-size: 14px;
     }
 
     main {
         background-color: #E4C9D9;
-        grid-row: span 3 / span 3;
-        grid-column-start: 1;
-        grid-column: span 4 / span 4;
-        grid-row-start: 2;
+        height: 100%;
 
     }
 }
