@@ -1,22 +1,17 @@
 import "./Documentacao.css"
-const Documentacao = () => {
+const Main = () => {
 
     return (
         <div id="documentacao">
-            <div className="header"></div>
             <div className="main"></div>
         </div>
     )
-
 }
-const BarraInicio = () => {
-    return (
-        <div>
-            <div className="inicio titulos">
-                <div className="titulo">Documentação</div>
-                <div className="barra"></div>
-            </div>
 
+const Titulo = () => {
+    return (
+        <div className="amarelo">
+            <h1>Documentação</h1>
         </div>
     )
 }
@@ -31,7 +26,7 @@ const Coluna = () => {
     )
 }
 
-const BarraSecundario = () => {
+const Header = () => {
     return (
         <div className="barra-secundario">
             <div className="parte1"></div>
@@ -41,8 +36,8 @@ const BarraSecundario = () => {
 }
 
 export default {
-    Documentacao,
-    BarraInicio,
+    Main,
+    Titulo,
     Coluna,
-    BarraSecundario
+    Header
 };

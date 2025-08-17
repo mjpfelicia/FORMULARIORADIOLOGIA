@@ -1,9 +1,9 @@
-import "./Tomografia.css";
+import "./Radiografia.css";
 
 const Titulo = () => {
     return (
         <>
-            <h1>Tomografia</h1>
+            <h1>Radiografia</h1>
         </>
     );
 }
@@ -22,8 +22,10 @@ const Header = () => {
 
 const Main = () => {
     return (
-        <div id="tomografia">
-            <div className="main"></div>
+        <div id="radiografia">
+            <div className="main">
+                test
+            </div>
         </div>
     );
 }

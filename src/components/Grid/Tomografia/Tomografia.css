@@ -1,13 +1,13 @@
 #tomografia {
     height: 100%;
+    width: 100%;
 
-    header{
-        height: 10%;
+    .header{
     }
 
-    main {
+    .main {
         background-color: #F1F6DF;
-        height: 90%;
+        height: 100%;
 
     }
 }

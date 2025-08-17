@@ -5,7 +5,7 @@ import Grid from './components/Grid/Grid'
 
 
 
-import Radiagrafia from "./components/Grid/Radiografia/Radiagrafia";
+import Radiagrafia from "./components/Grid/Radiografia/Radiografia";
 import Tomografia from "./components/Grid/Tomografia/Tomografia";
 import Documentacao from "./components/Grid/Documentacao/Documentacao"
 import Protocolos from "./components/Grid/Protocolos/Protocolos"
@@ -15,8 +15,8 @@ const App = () => {
         <div>
             <TomografiaOdontologica />
             <Grid
-            tomografia={<Tomografia/>}
-            radiologia={<Radiagrafia/>}
+            tomografia={Tomografia}
+            radiografia={Radiagrafia}
             documentacao={Documentacao}
             protocolos={Protocolos}
             servicos={Servicos}
