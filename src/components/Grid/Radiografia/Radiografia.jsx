@@ -3,7 +3,7 @@ import "./Radiografia.css";
 const Titulo = () => {
     return (
         <>
-            <h1>Radiografia</h1>
+            <h1>Radiografias</h1>
         </>
     );
 }

@@ -1,7 +1,11 @@
 import "./Protocolos.css";
 
 const Titulo = () => {
-    return (<></>);
+    return (
+        <>
+            <h1>Protocolos</h1>
+        </>
+    );
 }
 
 const Coluna = () => {

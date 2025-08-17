@@ -1,5 +1,6 @@
 #radiografia {
     height: 100%;
+    width: 100%;
 
     .main {
         background-color: #D5E4F5;
@@ -8,4 +9,3 @@
     }
 
 }
-
