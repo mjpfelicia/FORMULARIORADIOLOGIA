@@ -35,9 +35,11 @@ const Header = () => {
     )
 }
 
-export default {
+const Documentacao = {
     Main,
     Titulo,
     Coluna,
     Header
 };
+
+export default Documentacao;

@@ -30,9 +30,11 @@ const Main = () => {
     );
 }
 
-export default {
+const Radiografia = {
     Titulo,
     Coluna,
     Header,
     Main,
 }
+
+export default Radiografia;

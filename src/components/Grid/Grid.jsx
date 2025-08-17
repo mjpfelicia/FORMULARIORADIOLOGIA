@@ -2,7 +2,7 @@ import "./Grid.css";
 
 const Grid = ({ tomografia, radiografia, documentacao, protocolos, servicos }) => {
     return (
-        <div class="parent">
+        <div className="parent">
             <div class="verde verde1 titulo">{<tomografia.Titulo/>}</div>
             <div class="verde verde2"> {<tomografia.Main/>}</div>
             <div class="verde verde3">{<tomografia.Header/>}</div>

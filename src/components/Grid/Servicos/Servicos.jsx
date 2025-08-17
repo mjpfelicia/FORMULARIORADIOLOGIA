@@ -15,7 +15,7 @@ const Header = () => {
     return (
         <div className="header">
 
-        </div> 
+        </div>
     );
 }
 
@@ -27,9 +27,11 @@ const Main = () => {
     );
 }
 
-export default {
+const Servicos = {
     Titulo,
     Coluna,
     Header,
     Main,
 }
+
+export default Servicos;

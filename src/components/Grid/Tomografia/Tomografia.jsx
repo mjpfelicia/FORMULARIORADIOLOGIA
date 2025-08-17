@@ -28,9 +28,11 @@ const Main = () => {
     );
 }
 
-export default {
+const Tomografia = {
     Titulo,
     Coluna,
     Header,
     Main,
-}
+};
+
+export default Tomografia;

@@ -12,7 +12,7 @@ const Header = () => {
     return (
         <div className="header">
 
-        </div> 
+        </div>
     );
 }
 const Main = () => {
@@ -25,10 +25,11 @@ const Main = () => {
         </div>
     );
 }
-
-export default {
+const Protocolos = {
     Titulo,
     Coluna,
     Header,
     Main,
 }
+
+export default Protocolos;
