@@ -24,124 +24,190 @@ const TomografiaOdontologica = () => {
                     <div className="tomografia-content">
                         <div className="tomografia-content">
                             <div className="tomografia-grid">
-                                <div>
-                                    <ul className='item-ul'>
+                                <div className="primeira-col">
+                                    <ul className="item-ul">
                                         <li>
-                                            <label className="parentheses" for="endodontia">
+                                            <label className="parentheses" htmlFor="endodontia">
                                                 <input type="checkbox" id="endodontia" />
                                                 <span className="symbol"></span> Endodontia
                                             </label>
                                         </li>
                                         <li>
-                                            <label className="parentheses" for="implantodontia">
+                                            <label className="parentheses" htmlFor="implantodontia">
                                                 <input type="checkbox" id="implantodontia" />
                                                 <span className="symbol"></span> Implantodontia
                                             </label>
                                         </li>
                                         <li>
-                                            <label className="parentheses" for="ortodontia">
+                                            <label className="parentheses" htmlFor="ortodontia">
                                                 <input type="checkbox" id="ortodontia" />
                                                 <span className="symbol"></span> Ortodontia / Ortopedia
                                             </label>
                                         </li>
                                         <li>
-                                            <label className="parentheses" for="cirurgia">
+                                            <label className="parentheses" htmlFor="cirurgia">
                                                 <input type="checkbox" id="cirurgia" />
                                                 <span className="symbol"></span> Cirurgia
                                             </label>
                                         </li>
                                         <li>
-                                            <label className="parentheses" for="periodontia">
+                                            <label className="parentheses" htmlFor="periodontia">
                                                 <input type="checkbox" id="periodontia" />
                                                 <span className="symbol"></span> Periodontia
                                             </label>
                                         </li>
                                         <li>
-                                            <label className="parentheses" for="biologia">
+                                            <label className="parentheses" htmlFor="biologia">
                                                 <input type="checkbox" id="biologia" />
                                                 <span className="symbol"></span> Biologia
                                             </label>
                                         </li>
                                     </ul>
-                                    <label className="parentheses" for="outra">
+                                    <label className="parentheses" htmlFor="outra">
                                         <input type="checkbox" id="outra" />
                                         <span className="symbol borda"></span> Outra
                                         <input type="text" className="linha-simples" />
                                     </label>
                                 </div>
-                                <div>
-                                    <ul>
+                                <div className="segunda-col">
+                                    <ul className="item-ul-segunda">
                                         <li>
-                                            <input type="checkbox" id="cranio" />
-                                            <label for="cranio">Crânio</label>
+                                            <label className="parentheses" htmlFor="cranio">
+                                                <input type="checkbox" id="cranio" />
+                                                <span className="symbol"></span> Crânio
+                                            </label>
                                         </li>
                                         <li>
-                                            <input type="checkbox" id="cranio-atm" />
-                                            <label for="cranio-atm">Crânio / ATM</label>
+                                            <label className="parentheses" htmlFor="cranio-atm">
+                                                <input type="checkbox" id="cranio-atm" />
+                                                <span className="symbol"></span> Crânio / ATM
+                                            </label>
                                         </li>
                                         <li>
-                                            <input type="checkbox" id="atm-localizada" />
-                                            <label for="atm-localizada">ATM (localizada)</label>
+                                            <label className="parentheses" htmlFor="atm-localizada">
+                                                <input type="checkbox" id="atm-localizada" />
+                                                <span className="symbol"></span>
+                                                <span className="linha-container">
+                                                    <span className="texto">ATM (localizada)</span>
+                                                    <span className="linha-horizontal"></span>
+                                                </span>
+                                            </label>
+                                        </li>
+
+                                        <li>
+                                            <label className="parentheses" htmlFor="maxila">
+                                                <input type="checkbox" id="maxila" />
+                                                <span className="symbol"></span> Maxila
+                                            </label>
                                         </li>
                                         <li>
-                                            <input type="checkbox" id="maxila" />
-                                            <label for="maxila">Maxila</label>
+                                            <label className="parentheses" htmlFor="mandibula">
+                                                <input type="checkbox" id="mandibula" />
+                                                <span className="symbol"></span> Mandíbula
+                                            </label>
                                         </li>
                                         <li>
-                                            <input type="checkbox" id="mandibula" />
-                                            <label for="mandibula">Mandíbula</label>
+                                            <label className="parentheses" htmlFor="implante">
+                                                <input type="checkbox" id="implante" />
+                                                <span className="symbol"></span> Região para Implante (assinale)
+                                            </label>
+                                        </li>
+                                        <li id="item-altissima">
+                                            <label className="parentheses" htmlFor="altissima">
+                                                <input type="checkbox" id="altissima" />
+                                                <span className="symbol"></span>
+                                                <span className="texto">
+                                                    Investigativa Altíssima resolução<br /> (por elemento) assinale
+                                                </span>
+                                            </label>
                                         </li>
                                         <li>
-                                            <input type="checkbox" id="implante" />
-                                            <label for="implante">Região para Implante (assinale)</label>
+                                            <label className="parentheses" htmlFor="periodontal">
+                                                <input type="checkbox" id="periodontal" />
+                                                <span className="symbol"></span>
+                                                <span className="texto">
+                                                    Estudo Cristas Ósseas e Gengival<br />(periodontal)  assinale
+                                                </span>
+                                            </label>
                                         </li>
                                         <li>
-                                            <input type="checkbox" id="altissima" />
-                                            <label for="altissima">Investigativa Altíssima resolução (por elemento) assinale</label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="periodontal" />
-                                            <label for="periodontal">Estudo Cristas Ósseas e Gengival (periodontal)</label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="outra" />
-                                            <label for="outra">Outra</label>
+                                            <label className="parentheses" htmlFor="outra">
+                                                <input type="checkbox" id="outra" />
+                                                <span className="symbol borda"></span> Outra
+                                                <input type="text" className="linha-simples" />
+                                            </label>
                                         </li>
                                     </ul>
                                 </div>
 
-                                <div>
-                                    <ul>
-                                        <li>
-                                            <input type="checkbox" id="completa" />
-                                            <label for="completa">Completa (Oclusão e Max. Abertura)</label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="zampieri" />
-                                            <label for="zampieri">Zampieri & Scarlati</label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="simplificada" />
-                                            <label for="simplificada">Simplificada (sagital em oclusão)</label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="outra" />
-                                            <label for="outra">Outra</label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" id="volume" />
-                                            <label for="volume">Cálculo Volume Condilar</label>
-                                        </li>
-                                    </ul>
+                                <div className="terceira-col">
+                                    <div className='content-terceira-col'>
+                                        <div className='terceira-coluna '>
+                                            <ul className="item-ul-terceira">
+                                                <li>
+                                                    <label className="parentheses" htmlFor="completa">
+                                                        <input type="checkbox" id="completa" />
+                                                        <span className="symbol"></span> Completa (Oclusão e Max. Abertura)
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label className="parentheses" htmlFor="zampieri" style={{ display: 'flex', alignItems: 'center' }}>
+                                                        <input type="checkbox" id="zampieri" />
+                                                        <span className="symbol"></span>
+                                                        <span className="texto-com-linha">Zampieri & Scarlat</span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label className="parentheses" htmlFor="simplificada">
+                                                        <input type="checkbox" id="simplificada" />
+                                                        <span className="symbol"></span> Simplificada (sagital em oclusão)
+                                                    </label>
+                                                </li>
 
+                                                <li>
+                                                    <label className="parentheses" htmlFor="outra">
+                                                        <input type="checkbox" id="outra" />
+                                                        <span className="symbol borda"></span> Outra
+                                                        <input type="text" className="linha-simples" />
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div className='quarta-coluna'>
+                                            <ul>
+
+                                                <li>
+                                                    <label className="parentheses text-modificado" htmlFor="incluir">
+                                                        <input type="checkbox" id="incluir" />
+                                                        <span className="text-modificado borda"></span> Incluir:
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label className="parentheses" htmlFor="calculo">
+                                                        <input type="checkbox" id="calculo" />
+                                                        <span className="symbol text-modificado">
+                                                            Cálculo Volume <br /> Condilar
+                                                        </span>
+
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label className="parentheses text-modificado" htmlFor="outra2">
+                                                        <input type="checkbox" id="outra2" />
+                                                        <span className="symbol borda"></span> Outra
+                                                    </label>
+                                                    <input type="text" className="linha-simples abaixo-outra" />
+                                                </li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
                                     <div>
                                         <img src={arcada1} alt="Imagem da arcada dentária" />
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-
 
                     </div>
                 </div>
@@ -161,7 +227,7 @@ const TomografiaOdontologica = () => {
                     <h2 className="titulo-serviços">Serviços</h2>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

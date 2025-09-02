@@ -27,7 +27,7 @@ const Main = () => {
         <div id="tomografia">
             <div className="main">
                 <div className="tomografia-grid">
-                    <div>
+                    <div className="primeira">
                         <ul className='item-ul'>
                             <li>
                                 <label className="parentheses" for="endodontia">
@@ -72,7 +72,7 @@ const Main = () => {
                             <input type="text" className="linha-simples" />
                         </label>
                     </div>
-                    <div>
+                    <div className="segunda">
                         <ul>
                             <li>
                                 <input type="checkbox" id="cranio" />
@@ -100,7 +100,7 @@ const Main = () => {
                             </li>
                             <li>
                                 <input type="checkbox" id="altissima" />
-                                <label for="altissima">Investigativa Altíssima resolução (por elemento) assinale</label>
+                                <label for="altissima">Investigativa Altíssima resolução ,<br/> (por elemento) assinale</label>
                             </li>
                             <li>
                                 <input type="checkbox" id="periodontal" />
@@ -113,7 +113,7 @@ const Main = () => {
                         </ul>
                     </div>
 
-                    <div>
+                    <div className="terceira">
                         <ul>
                             <li>
                                 <input type="checkbox" id="completa" />
