@@ -145,13 +145,17 @@ const TomografiaOdontologica = () => {
                                         <div className='terceira-coluna '>
                                             <ul className="item-ul-terceira">
                                                 <li>
-                                                    <label className="parentheses" htmlFor="completa">
+                                                    <label className="parentheses linha-completa" htmlFor="completa">
                                                         <input type="checkbox" id="completa" />
-                                                        <span className="symbol"></span> Completa (Oclusão e Max. Abertura)
+                                                        <span className="symbol"></span>
+                                                        <div className="bloco-texto">
+                                                            <span className="texto">Completa (Oclusão e Max. Abertura)</span>
+                                                            <span className="linha-abaixo"></span>
+                                                        </div>
                                                     </label>
                                                 </li>
                                                 <li>
-                                                    <label className="parentheses" htmlFor="zampieri" style={{ display: 'flex', alignItems: 'center' }}>
+                                                    <label className="parentheses" htmlFor="zampieri" style={{ display: 'flex' }}>
                                                         <input type="checkbox" id="zampieri" />
                                                         <span className="symbol"></span>
                                                         <span className="texto-com-linha">Zampieri & Scarlat</span>
@@ -163,24 +167,45 @@ const TomografiaOdontologica = () => {
                                                         <span className="symbol"></span> Simplificada (sagital em oclusão)
                                                     </label>
                                                 </li>
-
                                                 <li>
                                                     <label className="parentheses" htmlFor="outra">
                                                         <input type="checkbox" id="outra" />
-                                                        <span className="symbol borda"></span> Outra
-                                                        <input type="text" className="linha-simples" />
+                                                        <span className="symbol borda"></span>
+                                                        <div class="linha-flex">
+                                                            <span class="texto-outra">Outra</span>
+                                                            <input type="text" className="linha-simples" />
+                                                            <span class="linha segunda"></span>
+                                                        </div>
                                                     </label>
                                                 </li>
                                             </ul>
                                         </div>
                                         <div className='quarta-coluna'>
                                             <ul>
-
-                                                <li>
-                                                    <label className="parentheses text-modificado" htmlFor="incluir">
+                                                <li style={{ position: 'relative' }}>
+                                                    <label
+                                                        htmlFor="incluir"
+                                                        className="parentheses text-modificado"
+                                                        style={{ position: 'relative', zIndex: 1 }}
+                                                    >
                                                         <input type="checkbox" id="incluir" />
                                                         <span className="text-modificado borda"></span> Incluir:
                                                     </label>
+
+                                                    {/* Linha inclinada */}
+                                                    <div
+                                                        style={{
+                                                            position: 'absolute',
+                                                            top: '140%',
+                                                            left: '-34px',
+                                                            width: '2rem',
+                                                            height: '1px',
+                                                            backgroundColor: '#2B4665',
+                                                            transform: 'rotate(-37deg)',
+                                                            zIndex: 0
+                                                        }}>
+
+                                                    </div>
                                                 </li>
                                                 <li>
                                                     <label className="parentheses" htmlFor="calculo">

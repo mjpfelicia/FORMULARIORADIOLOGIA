@@ -305,7 +305,7 @@ img {
     position: absolute;
     top: 0;
     left: 85px;
-    width: 62%;
+    width: 61%;
     height: 1px;
     background-color: var(--azul-texto);
 }
@@ -323,12 +323,12 @@ img {
 
 .linha-simples {
     border: none;
-    border-bottom: 1px solid var(--azul-texto);
-    background-color: transparent;
+    outline: none;
     width: 35%;
     height: 13px;
     margin-left: 0.3rem;
-    outline: none;
+    border-bottom: 1px solid var(--azul-texto);
+    background-color: transparent;
 }
 
 .linha-horizontal {
@@ -337,22 +337,24 @@ img {
     color: var(--azul-texto);
     font-weight: normal;
     letter-spacing: 2px;
+    flex-grow: 1;
+    height: 1px;
+    background-color: var(--azul-texto);
+    width: 12rem;
 }
 
 .texto-com-linha {
-    position: relative;
     display: inline-block;
-    padding-right: 100px;
 }
 
 .texto-com-linha::after {
     content: "";
     position: absolute;
-    top: 50%;
-    left: 95%;
-    width: 3rem;
-    height: 2px;
-    background-color: #999;
+    top: 41%;
+    left: 91%;
+    width: 2rem;
+    height: 1px;
+    background-color: var(--azul-texto);
     transform: translateY(-50%);
 }
 
@@ -371,14 +373,6 @@ img {
     align-items: flex-end;
     justify-content: space-between;
     width: 100%;
-}
-
-
-.linha-horizontal {
-    flex-grow: 1;
-    height: 1px;
-    background-color: var(--azul-texto);
-    width: 12rem;
 }
 
 .terceira-col {
@@ -405,11 +399,6 @@ img {
 
 }
 
-.linha-simples {
-    width: 100%;
-    max-width: 180px;
-}
-
 .item-ul-terceira {
     margin-left: 10px !important;
 }
@@ -422,10 +411,29 @@ img {
     content: "";
     position: absolute;
     right: 0;
-    top: 20px;
-    height: 81px;
+    top: 23px;
+    height: 87px;
     width: 1px;
     background-color: var(--azul-texto);
+}
+
+.linha-completa {
+    display: flex;
+    align-items: flex-start;
+}
+
+.bloco-texto {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+.linha-abaixo {
+    height: 1px;
+    background-color: var(--azul-texto);
+    width: 2rem;
 }
 
 .text-modificado {
@@ -433,8 +441,34 @@ img {
     font-weight: bold;
 }
 
-
 .abaixo-outra {
     display: block;
 
 }
+
+
+
+.linha-flex {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+
+.linha {
+    height: 1px;
+    background-color: var(--azul-texto);
+}
+
+.segunda {
+    width: 2rem;
+    margin-left: 8rem;
+}
+
+.quarta-coluna {
+    margin-left: 2rem;
+}
+
+
+
