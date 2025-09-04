@@ -66,7 +66,7 @@ const TomografiaOdontologica = () => {
                                     <label className="parentheses" htmlFor="outra">
                                         <input type="checkbox" id="outra" />
                                         <span className="symbol borda"></span> Outra
-                                        <input type="text" className="linha-simples" />
+                                        <input type="text" className="linha-simples1" />
                                     </label>
                                 </div>
                                 <div className="segunda-col">
@@ -126,7 +126,7 @@ const TomografiaOdontologica = () => {
                                                 <input type="checkbox" id="periodontal" />
                                                 <span className="symbol"></span>
                                                 <span className="texto">
-                                                    Estudo Cristas Ósseas e Gengival<br />(periodontal)  assinale
+                                                    Estudo Cristas Ósseas e Gengival<br />(periodontal)
                                                 </span>
                                             </label>
                                         </li>
@@ -227,7 +227,7 @@ const TomografiaOdontologica = () => {
 
                                         </div>
                                     </div>
-                                    <div>
+                                    <div className='content-img' >
                                         <img src={arcada1} alt="Imagem da arcada dentária" />
                                     </div>
                                 </div>
@@ -237,11 +237,139 @@ const TomografiaOdontologica = () => {
                     </div>
                 </div>
 
-                <div className="border-radiografia">
-                    <div className="grid-item content-rodigrafia">
-                        <h2 className="titulo-rodigrafia">Radiografia</h2>
+                <div className="border-radiografia radiografia-content">
+
+                    <h2 className="titulo-rodigrafia">Radiografia</h2>
+
+                    <div className="tomografia-grid Radiografia-grid">
+                        <div className="primeira-col radiologia">
+
+                            <div>
+                                <ul className="item-ul-radiografia">
+                                    <li>
+                                        <label className="parentheses" htmlFor="Panorâmica">
+                                            <input type="checkbox" id="Panorâmica" />
+                                            <span className="symbol"></span>Panorâmica"elipsopantomografia
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label className="parentheses" htmlFor="Padrao">
+                                            <input type="checkbox" id="Padrao" />
+                                            <span className="symbol"></span>Padrão
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label className="parentheses" htmlFor="Oclusao">
+                                            <input type="checkbox" id="Oclusao" />
+                                            <span className="symbol"></span>em Oclusão
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label className="parentheses" htmlFor="tracado">
+                                            <input type="checkbox" id="tracado" />
+                                            <span className="symbol"></span> com traçado implantes
+                                        </label>
+                                    </li>
+                                    <li style={{ alignItems: 'baseline' }}>
+                                        <label className="parentheses texto-alinhado" htmlFor="osteoporose">
+                                            <input type="checkbox" id="osteoporose" />
+                                            <span className="symbol"></span> com traçado/Análise <br /> de<br /> osteopenia / osteoporose
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div className="linha-checkboxes">
+                            <div className="coluna-esquerda">
+                                <label className="parentheses" htmlFor="Teles">
+                                    <input type="checkbox" id="Teles" />
+                                    <span className="symbol"></span> Teles
+                                </label>
+
+                                <label className="parentheses" htmlFor="Lateral">
+                                    <input type="checkbox" id="Lateral" />
+                                    <span className="symbol"></span> Lateral
+                                </label>
+
+                                <label className="parentheses" htmlFor="Frontal">
+                                    <input type="checkbox" id="Frontal" />
+                                    <span className="symbol"></span> Frontal
+                                </label>
+
+                                <label className="parentheses" htmlFor="AnaliseCarpal">
+                                    <input type="checkbox" id="AnaliseCarpal" />
+                                    <span className="symbol"></span> Análise Carpal
+                                </label>
+                            </div>
+
+                            <div className="coluna-direita">
+                                <label className="parentheses" htmlFor="Cefalometria">
+                                    <input type="checkbox" id="Cefalometria" />
+                                    <span className="symbol"></span> Cefalometria
+                                </label>
+                            </div>
+                        </div>
+
+                        <div className="terceira-coluna radiografia" style={{display: 'flex'}}>
+                            <div>
+                                <label className="parentheses" htmlFor=" Periapicais">
+                                    <input type="checkbox" id=" Periapicais" />
+                                    <span className="symbol"></span> Periapicais
+                                </label>
+
+                                <label className="parentheses texto-alinhado" htmlFor=" Periapicais">
+                                    <input type="checkbox" id=" Periapicais" />
+                                    <span className="symbol"></span>Levantamento<br /> completo (18 tomadas)
+                                </label>
+
+                                <label className="parentheses texto-alinhado" htmlFor="Apenas">
+                                    <input type="checkbox" id="Apenas" />
+                                    <span className="symbol"></span>Apenas Regiões<br /> Assinaladas
+                                </label>
+
+                                <label className="parentheses texto-alinhado" htmlFor="AnaliseCarpal">
+                                    <input type="checkbox" id="AnaliseCarpal" />
+                                    <span className="symbol"></span>Técnica Localização<br /> de Clarck<br /> (Considere a opção<br /> de tomografia)
+                                </label>
+                            </div>
+
+
+                            <div>
+                            <label className="parentheses texto-alinhado" htmlFor="ampliada">
+                                <input type="checkbox" id="ampliada" />
+                                <span className="symbol"></span>Impressão ampliada
+                            </label>
+
+                            </div>
+
+
+
+
+                        </div>
+
                     </div>
+
+
+
+
+
                 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <div className="grid-item content-documentaçao">
                     <h2 className="titulo-documentaçao">Documentaçao</h2>
                 </div>

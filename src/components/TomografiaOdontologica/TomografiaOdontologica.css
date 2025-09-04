@@ -98,7 +98,7 @@ img {
     width: 88%;
     height: 100%;
     background-color: var(--azul-principal);
-    transform: translateX(100%);
+    transform: translateX(99%);
     z-index: 9999;
 }
 
@@ -209,10 +209,11 @@ img {
     z-index: 1;
 }
 
-.tomografia-grid {
+.tomografia-grid,
+.Radiografia-grid {
     display: grid;
     grid-template-columns: 2fr 2fr 3fr;
-    gap: 5px;
+    gap: 1px;
     padding: 1rem;
     word-break: break-word;
     white-space: nowrap;
@@ -324,7 +325,17 @@ img {
 .linha-simples {
     border: none;
     outline: none;
-    width: 35%;
+    width: 77%;
+    height: 13px;
+    margin-left: 0.3rem;
+    border-bottom: 1px solid var(--azul-texto);
+    background-color: transparent;
+}
+
+.linha-simples1 {
+    border: none;
+    outline: none;
+    width: 45%;
     height: 13px;
     margin-left: 0.3rem;
     border-bottom: 1px solid var(--azul-texto);
@@ -359,7 +370,7 @@ img {
 }
 
 .segunda-col {
-    height: 100%;
+    height: 84%;
     border-left: 1px solid var(--azul-texto);
 }
 
@@ -377,16 +388,12 @@ img {
 
 .terceira-col {
     border-left: 1px solid var(--azul-texto);
-    height: 35%;
+    height: 31%;
     word-break: break-word;
     white-space: nowrap;
 }
 
-.terceira-col {
 
-    word-break: break-word;
-    white-space: nowrap;
-}
 
 .content-terceira-col {
     display: flex;
@@ -443,10 +450,8 @@ img {
 
 .abaixo-outra {
     display: block;
-
+    width: 100%;
 }
-
-
 
 .linha-flex {
     display: flex;
@@ -470,5 +475,48 @@ img {
     margin-left: 2rem;
 }
 
+.content-img {
+    margin-top: .6rem;
+}
+
+.texto-alinhado {
+    text-align: justify;
+    align-items: baseline;
+}
 
 
+.radiografia-content {
+    width: 95%;
+    text-align: center;
+    background-color: var(--azul-bg);
+}
+.titulo-rodigrafia{
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    top: -1.8rem;
+    margin: 0;
+}
+#osteoporose {
+    text-align: justify;
+}
+
+
+.linha-checkboxes {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.coluna-esquerda {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.coluna-direita {
+  margin-top: 3rem;
+
+}
