@@ -46,6 +46,27 @@ img {
     width: 100%;
 }
 
+.img-seta {
+    display: flex;
+ 
+    align-items: center;
+    width: 100%;
+    height: 50%;
+
+}
+
+.img-seta img {
+    max-width: 3rem;
+    height: 3rem;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0.5rem
+}
+
 /* Grid principal */
 .grid-container {
     display: grid;
@@ -289,14 +310,14 @@ img {
 
 .item-ul {
     position: relative;
-    width: 70%;
-    padding: 20px;
+
     border-right: 1px solid var(--azul-texto);
 }
 
 .item-ul li {
     display: flex;
     align-items: center;
+    margin-right: 1rem;
 
 }
 
@@ -335,7 +356,7 @@ img {
 .linha-simples1 {
     border: none;
     outline: none;
-    width: 45%;
+    width: 65%;
     height: 13px;
     margin-left: 0.3rem;
     border-bottom: 1px solid var(--azul-texto);
@@ -448,10 +469,6 @@ img {
     font-weight: bold;
 }
 
-.abaixo-outra {
-    display: block;
-    width: 100%;
-}
 
 .linha-flex {
     display: flex;
@@ -490,7 +507,8 @@ img {
     text-align: center;
     background-color: var(--azul-bg);
 }
-.titulo-rodigrafia{
+
+.titulo-rodigrafia {
     font-size: 1.5rem;
     color: white;
     font-weight: bold;
@@ -498,6 +516,7 @@ img {
     top: -1.8rem;
     margin: 0;
 }
+
 #osteoporose {
     text-align: justify;
 }
@@ -517,6 +536,6 @@ img {
 }
 
 .coluna-direita {
-  margin-top: 3rem;
+    margin-top: 2rem;
 
 }

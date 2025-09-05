@@ -2,6 +2,12 @@
 import React from 'react';
 import './TomografiaOdontologica.css';
 import arcada1 from '../../../src/images/arcada1.png';
+import RadiografiaForm from '../../components/RadiografiaForm/RadiografiaForm';
+import seta from '../../images/seta.png';
+
+
+
+
 
 const TomografiaOdontologica = () => {
     return (
@@ -24,51 +30,60 @@ const TomografiaOdontologica = () => {
                     <div className="tomografia-content">
                         <div className="tomografia-content">
                             <div className="tomografia-grid">
-                                <div className="primeira-col">
-                                    <ul className="item-ul">
-                                        <li>
-                                            <label className="parentheses" htmlFor="endodontia">
-                                                <input type="checkbox" id="endodontia" />
-                                                <span className="symbol"></span> Endodontia
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label className="parentheses" htmlFor="implantodontia">
-                                                <input type="checkbox" id="implantodontia" />
-                                                <span className="symbol"></span> Implantodontia
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label className="parentheses" htmlFor="ortodontia">
-                                                <input type="checkbox" id="ortodontia" />
-                                                <span className="symbol"></span> Ortodontia / Ortopedia
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label className="parentheses" htmlFor="cirurgia">
-                                                <input type="checkbox" id="cirurgia" />
-                                                <span className="symbol"></span> Cirurgia
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label className="parentheses" htmlFor="periodontia">
-                                                <input type="checkbox" id="periodontia" />
-                                                <span className="symbol"></span> Periodontia
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label className="parentheses" htmlFor="biologia">
-                                                <input type="checkbox" id="biologia" />
-                                                <span className="symbol"></span> Biologia
-                                            </label>
-                                        </li>
-                                    </ul>
-                                    <label className="parentheses" htmlFor="outra">
-                                        <input type="checkbox" id="outra" />
-                                        <span className="symbol borda"></span> Outra
-                                        <input type="text" className="linha-simples1" />
-                                    </label>
+                                <div className="primeira-col  flex-container">
+
+                                    <div>
+                                        <ul className="item-ul">
+                                            <li>
+                                                <label className="parentheses" htmlFor="endodontia">
+                                                    <input type="checkbox" id="endodontia" />
+                                                    <span className="symbol"></span> Endodontia
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label className="parentheses" htmlFor="implantodontia">
+                                                    <input type="checkbox" id="implantodontia" />
+                                                    <span className="symbol"></span> Implantodontia
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label className="parentheses" htmlFor="ortodontia">
+                                                    <input type="checkbox" id="ortodontia" />
+                                                    <span className="symbol"></span> Ortodontia / Ortopedia
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label className="parentheses" htmlFor="cirurgia">
+                                                    <input type="checkbox" id="cirurgia" />
+                                                    <span className="symbol"></span> Cirurgia
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label className="parentheses" htmlFor="periodontia">
+                                                    <input type="checkbox" id="periodontia" />
+                                                    <span className="symbol"></span> Periodontia
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label className="parentheses" htmlFor="biologia">
+                                                    <input type="checkbox" id="biologia" />
+                                                    <span className="symbol"></span> Biologia
+                                                </label>
+                                            </li>
+                                        </ul>
+                                        <label className="parentheses" htmlFor="outra">
+                                            <input type="checkbox" id="outra" />
+                                            <span className="symbol borda"></span> Outra
+                                            <input type="text" className="linha-simples1" />
+                                        </label>
+                                    </div>
+                                    <div className="img-seta">
+                                        <img src={seta} alt="seta" />
+                                    </div>
                                 </div>
+
+
+
                                 <div className="segunda-col">
                                     <ul className="item-ul-segunda">
                                         <li>
@@ -237,133 +252,7 @@ const TomografiaOdontologica = () => {
                     </div>
                 </div>
 
-                <div className="border-radiografia radiografia-content">
-
-                    <h2 className="titulo-rodigrafia">Radiografia</h2>
-
-                    <div className="tomografia-grid Radiografia-grid">
-                        <div className="primeira-col radiologia">
-
-                            <div>
-                                <ul className="item-ul-radiografia">
-                                    <li>
-                                        <label className="parentheses" htmlFor="Panorâmica">
-                                            <input type="checkbox" id="Panorâmica" />
-                                            <span className="symbol"></span>Panorâmica"elipsopantomografia
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label className="parentheses" htmlFor="Padrao">
-                                            <input type="checkbox" id="Padrao" />
-                                            <span className="symbol"></span>Padrão
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label className="parentheses" htmlFor="Oclusao">
-                                            <input type="checkbox" id="Oclusao" />
-                                            <span className="symbol"></span>em Oclusão
-                                        </label>
-                                    </li>
-                                    <li>
-                                        <label className="parentheses" htmlFor="tracado">
-                                            <input type="checkbox" id="tracado" />
-                                            <span className="symbol"></span> com traçado implantes
-                                        </label>
-                                    </li>
-                                    <li style={{ alignItems: 'baseline' }}>
-                                        <label className="parentheses texto-alinhado" htmlFor="osteoporose">
-                                            <input type="checkbox" id="osteoporose" />
-                                            <span className="symbol"></span> com traçado/Análise <br /> de<br /> osteopenia / osteoporose
-                                        </label>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="linha-checkboxes">
-                            <div className="coluna-esquerda">
-                                <label className="parentheses" htmlFor="Teles">
-                                    <input type="checkbox" id="Teles" />
-                                    <span className="symbol"></span> Teles
-                                </label>
-
-                                <label className="parentheses" htmlFor="Lateral">
-                                    <input type="checkbox" id="Lateral" />
-                                    <span className="symbol"></span> Lateral
-                                </label>
-
-                                <label className="parentheses" htmlFor="Frontal">
-                                    <input type="checkbox" id="Frontal" />
-                                    <span className="symbol"></span> Frontal
-                                </label>
-
-                                <label className="parentheses" htmlFor="AnaliseCarpal">
-                                    <input type="checkbox" id="AnaliseCarpal" />
-                                    <span className="symbol"></span> Análise Carpal
-                                </label>
-                            </div>
-
-                            <div className="coluna-direita">
-                                <label className="parentheses" htmlFor="Cefalometria">
-                                    <input type="checkbox" id="Cefalometria" />
-                                    <span className="symbol"></span> Cefalometria
-                                </label>
-                            </div>
-                        </div>
-
-                        <div className="terceira-coluna radiografia" style={{display: 'flex'}}>
-                            <div>
-                                <label className="parentheses" htmlFor=" Periapicais">
-                                    <input type="checkbox" id=" Periapicais" />
-                                    <span className="symbol"></span> Periapicais
-                                </label>
-
-                                <label className="parentheses texto-alinhado" htmlFor=" Periapicais">
-                                    <input type="checkbox" id=" Periapicais" />
-                                    <span className="symbol"></span>Levantamento<br /> completo (18 tomadas)
-                                </label>
-
-                                <label className="parentheses texto-alinhado" htmlFor="Apenas">
-                                    <input type="checkbox" id="Apenas" />
-                                    <span className="symbol"></span>Apenas Regiões<br /> Assinaladas
-                                </label>
-
-                                <label className="parentheses texto-alinhado" htmlFor="AnaliseCarpal">
-                                    <input type="checkbox" id="AnaliseCarpal" />
-                                    <span className="symbol"></span>Técnica Localização<br /> de Clarck<br /> (Considere a opção<br /> de tomografia)
-                                </label>
-                            </div>
-
-
-                            <div>
-                            <label className="parentheses texto-alinhado" htmlFor="ampliada">
-                                <input type="checkbox" id="ampliada" />
-                                <span className="symbol"></span>Impressão ampliada
-                            </label>
-
-                            </div>
-
-
-
-
-                        </div>
-
-                    </div>
-
-
-
-
-
-                </div>
-
-
-
-
-
-
-
-
-
-
+                <RadiografiaForm />
 
 
 
