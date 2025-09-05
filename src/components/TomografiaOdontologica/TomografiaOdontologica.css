@@ -181,13 +181,6 @@ img {
     background: var(--verde-titulo);
 }
 
-/* Conteúdo interno da tomografia */
-.content-tomografia {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    /* ou uma altura fixa, ex: 500px */
-}
 
 .tomografia-content {
     position: relative;
