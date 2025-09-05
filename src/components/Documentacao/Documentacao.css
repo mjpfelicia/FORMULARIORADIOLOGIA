@@ -1,0 +1,41 @@
+.documentacao-container {
+  background-color: var(--amarelo-bg);
+  width: 95%;
+  margin: 1rem auto;
+}
+
+
+.documentacao-titulo {
+  font-size: 1.5rem;
+  color: var(--roxo);
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.documentacao-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.documentacao-lista li {
+  margin-bottom: 0.5rem;
+}
+
+.content-documentacao{
+    width: 65%;
+}
+
+
+.borda-documentaçao{
+ border-bottom: 30px solid var(--amarelo);
+  padding-left: 30px;
+  box-sizing: border-box;
+  margin-left: -37px;
+  margin-top: 0.5rem;
+  width: calc(100% + 35px);
+
+
+}
+

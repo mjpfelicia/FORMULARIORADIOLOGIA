@@ -14,14 +14,6 @@ const App = () => {
     return (
         <div>
             <TomografiaOdontologica />
-            <Grid
-            tomografia={Tomografia}
-            radiografia={Radiagrafia}
-            documentacao={Documentacao}
-            protocolos={Protocolos}
-            servicos={Servicos}
-              
-            />
         </div>
     );
 };

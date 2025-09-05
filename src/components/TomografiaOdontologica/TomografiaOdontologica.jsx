@@ -3,6 +3,7 @@ import React from 'react';
 import './TomografiaOdontologica.css';
 import TomografiaForm from '../TomografiaForm/TomografiaForm';
 import RadiografiaForm from '../../components/RadiografiaForm/RadiografiaForm';
+import Documentacao from '../Documentacao/Documentacao';
 import seta from '../../images/seta.png';
 import arcada1 from '../../images/arcada1.png';
 
@@ -25,19 +26,31 @@ const TomografiaOdontologica = () => {
                 <div className="content-tomografia border-tomografia">
                     <div className="borda-esquerda"></div>
                     <div className="titulo-tomografia">
-                        <h2 className="">Tomografia</h2>
+                        <h2>Tomografia</h2>
                     </div>
                     <div className="tomografia-content">
                         <TomografiaForm seta={seta} arcada1={arcada1} />
+                    </div>
+                </div>
+                <div className='content-radiografia'>
+                    <RadiografiaForm />
+                    <div className=" borda-documentaçao"></div>
+                </div>
 
+
+                <div className="content-documentacao borda-esquerda-documentacao">
+                    <div>
+                        <div className="titulo-documentacao">
+                            <h2>Documentaçao</h2>
+                        </div>
+                        <Documentacao />
                     </div>
                 </div>
 
-                <RadiografiaForm />
 
-                <div className="grid-item content-documentaçao">
-                    <h2 className="titulo-documentaçao">Documentaçao</h2>
-                </div>
+
+
+
                 <div className="grid-item content-protocolos">
                     <h2 className="titulo-protocolos">Protocolos</h2>
                 </div>

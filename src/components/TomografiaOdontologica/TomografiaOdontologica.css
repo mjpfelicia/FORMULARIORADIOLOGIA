@@ -48,7 +48,7 @@ img {
 
 .img-seta {
     display: flex;
- 
+
     align-items: center;
     width: 100%;
     height: 50%;
@@ -94,10 +94,10 @@ img {
 
 /* Estilo para cada item da lista */
 .item-tomografia {
-    color: black;
+    color: var(--azul-texto);
     font-size: 1.2rem;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .item-radiografia {
@@ -106,7 +106,7 @@ img {
     background-color: white;
     color: var(--azul-texto);
     font-size: 1.2rem;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 
 }
 
@@ -114,22 +114,50 @@ img {
 .item-radiografia::after {
     content: "";
     position: absolute;
-    top: 0;
+    top: 10px;
     right: 0;
     width: 88%;
     height: 100%;
     background-color: var(--azul-principal);
-    transform: translateX(99%);
+    transform: translateX(100%);
     z-index: 9999;
 }
 
+/* Borda deslocada à direita */
 .item-documentacao {
-    background-color: var(--amarelo);
-    color: var(--roxo);
+    position: relative;
     font-size: 1.1rem;
-    padding: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
+
+/* Faixa vertical deslocada à direita */
+.item-documentacao::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--amarelo);
+    transform: translateX(114%);
+    z-index: 9999;
+}
+
+
+/* Borda deslocada à direita */
+.borda-esquerda-documentacao::before {
+    content: "";
+    position: absolute;
+    top: 7rem;
+    right: 0;
+    width: 2%;
+    height: 63%;
+    background-color: var(--amarelo);
+    transform: translateX(-4284%);
+    z-index: 9999;
+}
+
+
 
 .sidebar ul li:nth-child(4) {
     background-color: var(--roxo);
@@ -149,7 +177,7 @@ img {
 
 /* Conteúdo geral da tomografia */
 .content-tomografia {
-    color: var(--roxo);
+    color: var(--azul-texto);
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -179,6 +207,18 @@ img {
     margin: 0;
     color: white;
     background: var(--verde-titulo);
+}
+
+.titulo-documentacao h2 {
+    position: relative;
+    overflow: visible;
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    z-index: 2;
+    font-size: 1.5rem;
+    color: white;
+    top: ;
 }
 
 
@@ -211,6 +251,8 @@ img {
     padding-left: 30px;
     box-sizing: border-box;
 }
+
+
 
 /* Borda esquerda simulada */
 .borda-esquerda {
@@ -494,9 +536,12 @@ img {
     align-items: baseline;
 }
 
+.content-radiografia {
+    width: 95%;
+}
 
 .radiografia-content {
-    width: 95%;
+    height: 100%;
     text-align: center;
     background-color: var(--azul-bg);
 }
@@ -530,5 +575,53 @@ img {
 
 .coluna-direita {
     margin-top: 2rem;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+
+
+    
+.titulo-tomografia h2{
+    left: -113px;
+    width: calc(100% + 140px);
+    font-size: 28px;
+}
+    .item-radiografia::after {
+        width: 80%;
+    }
+
+    .item-documentacao::after {
+        width: 45%;
+
+    }
+
+    .borda-esquerda-documentacao::before {
+        height: 61%;
+        background-color: var(--amarelo);
+        transform: translateX(-4387%);
+    }
+
+
+    .borda-documentaçao {
+
+        margin-left: -29px;
+        margin-top: 0.5rem;
+        width: calc(100% + 35px);
+    }
+
 
 }
