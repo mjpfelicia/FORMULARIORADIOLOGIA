@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.2b589ae9.css",
-    "main.js": "/static/js/main.e70b76ad.js",
-    "static/media/logo-grancum.png": "/static/media/logo-grancum.c3c170c957419966d526.png",
-    "index.html": "/index.html",
-    "main.2b589ae9.css.map": "/static/css/main.2b589ae9.css.map",
-    "main.e70b76ad.js.map": "/static/js/main.e70b76ad.js.map"
+    "main.css": "/FORMULARIORADIOLOGIA/static/css/main.f4f1bd23.css",
+    "main.js": "/FORMULARIORADIOLOGIA/static/js/main.b5a411a0.js",
+    "static/media/arcada-dentaria.png": "/FORMULARIORADIOLOGIA/static/media/arcada-dentaria.0bfca60a63eea500e5db.png",
+    "static/media/arcada1.png": "/FORMULARIORADIOLOGIA/static/media/arcada1.72beb807e14a8ff40ff8.png",
+    "index.html": "/FORMULARIORADIOLOGIA/index.html",
+    "main.f4f1bd23.css.map": "/FORMULARIORADIOLOGIA/static/css/main.f4f1bd23.css.map",
+    "main.b5a411a0.js.map": "/FORMULARIORADIOLOGIA/static/js/main.b5a411a0.js.map"
   },
   "entrypoints": [
-    "static/css/main.2b589ae9.css",
-    "static/js/main.e70b76ad.js"
+    "static/css/main.f4f1bd23.css",
+    "static/js/main.b5a411a0.js"
   ]
 }
