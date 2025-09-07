@@ -1,4 +1,4 @@
-import '../../components/TomografiaOdontologica/TomografiaOdontologica.css'; 
+import '../../App.css'; 
 
 const TomografiaForm = ({ seta, arcada1 }) => {
   return (
