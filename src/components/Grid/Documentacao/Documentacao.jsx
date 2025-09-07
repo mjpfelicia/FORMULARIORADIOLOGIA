@@ -28,9 +28,7 @@ const Coluna = () => {
 
 const Header = () => {
     return (
-        <div className="barra-secundario">
-            <div className="parte1"></div>
-        </div>
+        <>   <h1>Documentação</h1></>
 
     )
 }

@@ -1,31 +1,31 @@
 import "./Grid.css";
 
-const Grid = ({ tomografia, radiografia, documentacao, protocolos, servicos }) => {
+const Grid = ({ tomografia, radiografia, documentacao = {}, protocolos = {}, servicos = {} }) => {
     return (
         <div className="parent">
-            <div class="verde verde1 titulo">{<tomografia.Titulo/>}</div>
-            <div class="verde verde2"> {<tomografia.Main/>}</div>
-            <div class="verde verde3">{<tomografia.Header/>}</div>
+            <div className="verde verde1 titulo">{tomografia?.Titulo ? <tomografia.Titulo /> : <></>}</div>
+            <div className="verde verde2"> {tomografia?.Main ? <tomografia.Main /> : <></>}</div>
+            <div className="verde verde3">{tomografia?.Header ? <tomografia.Header /> : <></>}</div>
 
-            <div class="azul1 azul titulo">{<radiografia.Titulo />}</div>
-            <div class="azul2 azul">{<radiografia.Coluna />}</div>
-            <div class="azul3 azul">{<radiografia.Header />}</div>
-            <div class="azul4 azul">{<radiografia.Main />}</div>
+            <div className="azul1 azul titulo">{radiografia?.Titulo ? <radiografia.Titulo /> : <></>}</div>
+            <div className="azul2 azul">{radiografia?.Coluna ? <radiografia.Coluna /> : <></>}</div>
+            <div className="azul3 azul">{radiografia?.Header ? <radiografia.Header /> : <></>}</div>
+            <div className="azul4 azul">{radiografia?.Main ? <radiografia.Main /> : <></>}</div>
 
-            <div class="amarelo1 amarelo titulo">{<documentacao.Titulo />}</div>
-            <div class="amarelo2 amarelo">{<documentacao.Coluna />}</div>
-            <div class="amarelo3 amarelo">{<documentacao.Header />}</div>
-            <div class="amarelo4 amarelo">{<documentacao.Main />}</div>
+            <div className="amarelo1 amarelo titulo">{documentacao?.Titulo ? <documentacao.Titulo /> : <></>}</div>
+            <div className="amarelo2 amarelo">{documentacao?.Coluna ? <documentacao.Coluna /> : <></>}</div>
+            <div className="amarelo3 amarelo">{documentacao?.Header ? <documentacao.Header /> : <></>}</div>
+            <div className="amarelo4 amarelo">{documentacao?.Main ? <documentacao.Main /> : <></>}</div>
 
-            <div class="rosa1 rosa titulo">{<protocolos.Titulo/>}</div>
-            <div class="rosa2 rosa">{<protocolos.Coluna/>}</div>
-            <div class="rosa3 rosa">{<protocolos.Main/>}</div>
-            <div class="rosa4 rosa">{<protocolos.Header/>}</div>
-            
-            <div class="roxo1 roxo titulo">{<servicos.Titulo/>}</div>
-            <div class="roxo2 roxo">{<servicos.Coluna/>}</div>
-            <div class="roxo3 roxo">{<servicos.Main/>}</div>
-            <div class="roxo4 roxo">{<servicos.Header/>}</div>
+            <div className="rosa1 rosa titulo">{protocolos?.Titulo ? <protocolos.Titulo /> : <></>}</div>
+            <div className="rosa2 rosa">{protocolos?.Coluna ? <protocolos.Coluna /> : <></>}</div>
+            <div className="rosa3 rosa">{protocolos?.Main ? <protocolos.Main /> : <></>}</div>
+            <div className="rosa4 rosa">{protocolos?.Header ? <protocolos.Header /> : <></>}</div>
+
+            <div className="roxo1 roxo titulo">{servicos?.Titulo ? <servicos.Titulo /> : <></>}</div>
+            <div className="roxo2 roxo">{servicos?.Coluna ? <servicos.Coluna /> : <></>}</div>
+            <div className="roxo3 roxo">{servicos?.Main ? <servicos.Main /> : <></>}</div>
+            <div className="roxo4 roxo">{servicos?.Header ? <servicos.Header /> : <></>}</div>
         </div>
 
     );

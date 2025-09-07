@@ -4,9 +4,13 @@ import Documentacao from './components/Documentacao/Documentacao';
 import seta from './images/seta.png';
 import arcada1 from './images/arcada1.png';
 
+import Grid from './components/Grid/Grid'
+import GridComponets from './components/Grid/';
+
+
 const App = () => {
     return (
-             <div>
+        <div>
             <div className="grid-container">
                 <div className="sidebar grid-item">
                     <ul>
@@ -52,6 +56,25 @@ const App = () => {
                     <h2 className="titulo-serviços">Serviços</h2>
                 </div>
             </div>
+
+            {/* <Grid
+                tomografia={{
+                    Main: () => <TomografiaForm seta={seta} arcada1={arcada1} />,
+                    Titulo: () => <h1>Tomografia</h1>,
+                }}
+                radiografia={{
+                    Main: () => <RadiografiaForm />,
+                    Titulo: () => <h1>Radiografia</h1>,
+                }}
+                documentacao={{
+                    Main: () => <GridComponets.Documentacao.Main />,
+                    Titulo: () => <h1>Documentação</h1>,
+                    Header: () => <>Documentação</>,
+
+                }}
+
+
+            /> */}
         </div >
     );
 };
