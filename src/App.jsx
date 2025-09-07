@@ -4,9 +4,6 @@ import Documentacao from './components/Documentacao/Documentacao';
 import seta from './images/seta.png';
 import arcada1 from './images/arcada1.png';
 
-import Grid from './components/Grid/Grid'
-import GridComponets from './components/Grid/';
-
 
 const App = () => {
     return (
