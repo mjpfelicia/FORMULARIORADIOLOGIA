@@ -1,13 +1,11 @@
 .documentacao-container {
   background-color: var(--amarelo-bg);
-  width: 95%;
   display: flex;
-  justify-content: space-evenly;
   align-items: flex-start;
-
-
-
+  padding: 0 2rem;
 }
+
+
 
 
 .titulo-documentacao h2 {
@@ -28,6 +26,14 @@
 
 .documentacao-lista li {
   margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  word-break: break-word;
+  flex-wrap: nowrap;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--azul-texto);
 }
 
 .content-documentacao {
@@ -38,53 +44,145 @@
   width: 60%;
 }
 
-
-
 .titulo-bloco {
   background-color: var(--amarelo);
   color: var(--azul-texto);
   font-weight: bold;
   text-align: center;
   width: 60px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  left: 12rem;
+  position: relative;
 }
 
-
-.linha-ortodontica {
+.linha-destaque {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
 }
 
-.linha-ortodontica-horizontal {
+.linha-horizontal-destaque {
   flex-grow: 1;
   height: 1px;
+  width: 2rem;
   background-color: var(--azul-texto);
-  margin-left: 10px;
+  margin-left: 12px;
 }
 
-
-.linha-ofm {
+.linha-ofm-destaque {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
 }
 
-.linha-ofm-horizontal {
+.linha-horizontal-ofm {
   flex-grow: 1;
   height: 1px;
   background-color: var(--azul-texto);
-  margin-left: 10px;
-  width: 51%;
+  margin-left: 12px;
+}
 
+
+.linha-com-cefalo {
+  display: flex;
+  align-items: center;
+}
+
+.linha-esquerda {
+  flex-grow: 1;
+  width: 2rem;
+  height: 1px;
+  background-color: var(--azul-texto);
 }
 
 .item-cefalometria {
   font-weight: bold;
-  color: #444;
+  color: var(--azul-texto);
   font-size: 15px;
   margin: 12px 0;
   padding-left: 24px;
+}
+
+.titulo-bloco-cefalo {
+
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: var(--azul-texto);
+}
+
+
+
+.documentacao-bloco-cefalo {
+display: flex
+;
+    padding-right: 9rem;
+    align-items: center;
+    width: 12%;
+    height: 64px;
+    border-left: 1px solid var(--azul-texto);
+    position: relative;
+    top: 46px;
+
+}
+
+
+.documentacao-bloco-cefalo-fundo {
+  display: flex;
+  padding-right: 9rem;
+  align-items: center;
+  width: 12%;
+  height: 32px;
+  border-left: 1px solid var(--azul-texto);
+  position: relative;
+  top: 46px;
+}
+
+.documentacao-bloco-3d {
+  height: 100%;
+}
+
+.documentacao-bloco-3d {
+  position: relative;
+  padding-left: 2rem;
+  height: 85%;
+}
+
+.documentacao-bloco-3d::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 11px;
+  height: 107%;
+  width: 1px;
+  background-color: var(--azul-texto);
+}
+
+.linha-ortodontica-3d {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.linha-horizontal-3d {
+  flex-grow: 1;
+  width: 2rem;
+  height: 1px;
+  background-color: var(--azul-texto);
+  margin-left: 12px;
+}
+
+
+.linha-ofm-3d {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.linha-horizontal-ofm {
+  flex-grow: 1;
+  height: 1px;
+  width: 2rem;
+  background-color: var(--azul-texto);
+  margin-left: 12px;
 }
