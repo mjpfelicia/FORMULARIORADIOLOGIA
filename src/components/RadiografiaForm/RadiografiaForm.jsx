@@ -5,7 +5,7 @@ import arcadaDentaria from '../../images/arcada-dentaria.png';
 
 const RadiografiaForm = () => {
   return (
-    <div className="border-radiografia radiografia-content">
+    <div className="radiografia-content">
       <h2 className="titulo-rodigrafia">Radiografia</h2>
 
       <div className="tomografia-grid Radiografia-grid">

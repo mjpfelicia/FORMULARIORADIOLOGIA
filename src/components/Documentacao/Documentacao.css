@@ -1,16 +1,23 @@
 .documentacao-container {
   background-color: var(--amarelo-bg);
   width: 95%;
-  margin: 1rem auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+
+
+
 }
 
 
-.documentacao-titulo {
+.titulo-documentacao h2 {
   font-size: 1.5rem;
-  color: var(--roxo);
+  color: white;
   font-weight: bold;
-  margin-bottom: 1rem;
+  position: relative;
+  margin: 0;
   text-align: center;
+
 }
 
 .documentacao-lista {
@@ -23,19 +30,61 @@
   margin-bottom: 0.5rem;
 }
 
-.content-documentacao{
-    width: 65%;
+.content-documentacao {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: center;
+  width: 60%;
 }
 
 
-.borda-documentaçao{
- border-bottom: 30px solid var(--amarelo);
-  padding-left: 30px;
-  box-sizing: border-box;
-  margin-left: -37px;
-  margin-top: 0.5rem;
-  width: calc(100% + 35px);
 
+.titulo-bloco {
+  background-color: var(--amarelo);
+  color: var(--azul-texto);
+  font-weight: bold;
+  text-align: center;
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+
+.linha-ortodontica {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.linha-ortodontica-horizontal {
+  flex-grow: 1;
+  height: 1px;
+  background-color: var(--azul-texto);
+  margin-left: 10px;
+}
+
+
+.linha-ofm {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.linha-ofm-horizontal {
+  flex-grow: 1;
+  height: 1px;
+  background-color: var(--azul-texto);
+  margin-left: 10px;
+  width: 51%;
 
 }
 
+.item-cefalometria {
+  font-weight: bold;
+  color: #444;
+  font-size: 15px;
+  margin: 12px 0;
+  padding-left: 24px;
+}

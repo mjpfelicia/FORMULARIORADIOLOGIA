@@ -74,7 +74,6 @@ img {
     grid-template-rows: 1fr 1fr 1fr;
     justify-content: end;
     justify-items: end;
-    height: 100vh;
     padding-top: 1rem;
     font-family: sans-serif;
 }
@@ -95,9 +94,10 @@ img {
 /* Estilo para cada item da lista */
 .item-tomografia {
     color: var(--azul-texto);
-    font-size: 1.2rem;
     padding: 10px;
     margin-bottom: 10px;
+    font-weight: bold;
+
 }
 
 .item-radiografia {
@@ -105,30 +105,13 @@ img {
     padding: 10px 10px 10px 15px;
     background-color: white;
     color: var(--azul-texto);
-    font-size: 1.2rem;
     margin-bottom: 10px;
+    font-weight: bold;
+
 
 }
 
-/* Borda deslocada à direita */
-.item-radiografia::after {
-    content: "";
-    position: absolute;
-    top: 10px;
-    right: 0;
-    width: 88%;
-    height: 100%;
-    background-color: var(--azul-principal);
-    transform: translateX(100%);
-    z-index: 9999;
-}
 
-/* Borda deslocada à direita */
-.item-documentacao {
-    position: relative;
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-}
 
 /* Faixa vertical deslocada à direita */
 .item-documentacao::after {
@@ -143,36 +126,20 @@ img {
     z-index: 9999;
 }
 
-
-/* Borda deslocada à direita */
-.borda-esquerda-documentacao::before {
-    content: "";
-    position: absolute;
-    top: 7rem;
-    right: 0;
-    width: 2%;
-    height: 83%;
-    background-color: var(--amarelo);
-    transform: translateX(-4284%);
-    z-index: 9999;
-}
-
-
-
 .sidebar ul li:nth-child(4) {
     background-color: var(--roxo);
     color: white;
-    font-size: 1rem;
+    font-weight: bold;
     padding: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .sidebar ul li:nth-child(5) {
     background-color: var(--rosa);
     color: black;
-    font-size: 0.95rem;
+    font-weight: bold;
     padding: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 /* Conteúdo geral da tomografia */
@@ -209,15 +176,17 @@ img {
     background: var(--verde-titulo);
 }
 
-.titulo-documentacao h2 {
-    position: relative;
-    overflow: visible;
-    width: 100%;
-    font-weight: bold;
-    text-align: center;
-    z-index: 2;
+.titulo-documentacao {
     font-size: 1.5rem;
+    height: 37px;
+    top: 0.4rem;
     color: white;
+    font-weight: bold;
+    position: relative;
+    margin: 0;
+    text-align: center;
+    align-self: center;
+
 }
 
 
@@ -230,39 +199,8 @@ img {
     z-index: 9999;
 }
 
-.tomografia-content::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 10px;
-    height: 100%;
-    background-color: var(--verde-destaque);
-    transform: translateX(-100%);
-    z-index: 9999;
-}
-
-/* Borda inferior e lateral esquerda */
-.border-tomografia {
-    position: relative;
-    width: 95%;
-    border-bottom: 30px solid var(--azul-principal);
-    padding-left: 30px;
-    box-sizing: border-box;
-}
 
 
-
-/* Borda esquerda simulada */
-.borda-esquerda {
-    position: absolute;
-    top: 14%;
-    left: 0;
-    width: 30px;
-    height: 86%;
-    background-color: var(--azul-principal);
-    z-index: 1;
-}
 
 .tomografia-grid,
 .Radiografia-grid {
@@ -355,27 +293,7 @@ img {
 
 }
 
-/* Borda superior parcial */
-.item-ul::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 85px;
-    width: 61%;
-    height: 1px;
-    background-color: var(--azul-texto);
-}
 
-/* Borda inferior parcial */
-.item-ul::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 58%;
-    height: 1px;
-    background-color: var(--azul-texto);
-}
 
 .linha-simples {
     border: none;
@@ -507,7 +425,7 @@ img {
 .linha-flex {
     display: flex;
     align-items: flex-end;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 100%;
     position: relative;
 }
@@ -574,53 +492,5 @@ img {
 
 .coluna-direita {
     margin-top: 2rem;
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 1200px) {
-
-
-    
-.titulo-tomografia h2{
-    left: -113px;
-    width: calc(100% + 140px);
-    font-size: 28px;
-}
-    .item-radiografia::after {
-        width: 80%;
-    }
-
-    .item-documentacao::after {
-        width: 45%;
-
-    }
-
-    .borda-esquerda-documentacao::before {
-        height: 61%;
-        background-color: var(--amarelo);
-        transform: translateX(-4387%);
-    }
-
-
-    .borda-documentaçao {
-
-        margin-left: -29px;
-        margin-top: 0.5rem;
-        width: calc(100% + 35px);
-    }
-
 
 }

@@ -1,8 +1,10 @@
 import TomografiaForm from './components/TomografiaForm/TomografiaForm';
 import RadiografiaForm from './components/RadiografiaForm/RadiografiaForm';
 import Documentacao from './components/Documentacao/Documentacao';
+import './components/borda.css';
 import seta from './images/seta.png';
 import arcada1 from './images/arcada1.png';
+import './App.css';
 
 
 const App = () => {
@@ -31,19 +33,10 @@ const App = () => {
                     <RadiografiaForm />
                     <div className=" borda-documentaçao"></div>
                 </div>
-
-
                 <div className="content-documentacao borda-esquerda-documentacao">
-                    <div>
-                        <div className="titulo-documentacao">
-                            <h2>Documentaçao</h2>
-                        </div>
-                        <Documentacao />
-                    </div>
+                    <h2 className='titulo-documentacao'>Documentaçao</h2>
+                    <Documentacao />
                 </div>
-
-
-
 
 
                 <div className="grid-item content-protocolos">

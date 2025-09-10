@@ -1,8 +1,9 @@
 import '../../App.css'; 
+import './TomografiaForm.css';
 
 const TomografiaForm = ({ seta, arcada1 }) => {
   return (
-    <div className="tomografia-content">
+    <div className="">
       <div className="tomografia-grid">
         <div className="primeira-col flex-container">
           <div>
