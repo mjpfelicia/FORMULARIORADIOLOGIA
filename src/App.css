@@ -127,16 +127,15 @@ img {
 }
 
 .sidebar ul li:nth-child(4) {
-    background-color: var(--roxo);
-    color: white;
+    color: var(--azul-texto);
     font-weight: bold;
     padding: 10px;
     margin-bottom: 10px;
 }
 
 .sidebar ul li:nth-child(5) {
-    background-color: var(--rosa);
-    color: black;
+    background-color: var(--roxo);
+    color: white;
     font-weight: bold;
     padding: 10px;
     margin-bottom: 10px;
@@ -178,12 +177,12 @@ img {
 
 .titulo-documentacao {
     font-size: 1.5rem;
-    height: 37px;
-    top: 0.4rem;
+    height: 0;
+    top: -37px;
     color: white;
     font-weight: bold;
     position: relative;
-    margin: 0;
+    margin: -5px;
     text-align: center;
     align-self: center;
 
@@ -458,7 +457,7 @@ img {
 }
 
 .radiografia-content {
-    height: 100%;
+    height: 90%;
     text-align: center;
     background-color: var(--azul-bg);
 }
@@ -492,5 +491,26 @@ img {
 
 .coluna-direita {
     margin-top: 2rem;
+
+}
+
+.titulo-protocolos {
+    position: relative;
+    width: 368px;
+    right: 15px;
+    font-size: 1.5rem;
+    height: 37px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    background-color: var(--rosa);
+
+}
+
+.content-serviços {
+    position: relative;
+    position: relative;
+    right: 82rem;
+    bottom: 29rem;
 
 }

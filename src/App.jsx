@@ -1,6 +1,7 @@
 import TomografiaForm from './components/TomografiaForm/TomografiaForm';
 import RadiografiaForm from './components/RadiografiaForm/RadiografiaForm';
 import Documentacao from './components/Documentacao/Documentacao';
+import Protocolo from './components/Protocolo/Protocolo';
 import './components/borda.css';
 import seta from './images/seta.png';
 import arcada1 from './images/arcada1.png';
@@ -16,8 +17,8 @@ const App = () => {
                         <li className="item-tomografia">Tomografia</li>
                         <li className="item-radiografia">Radiografias</li>
                         <li className="item-documentacao">Documentação</li>
-                        <li className="">Protocolos</li>
-                        <li className="">Serviços</li>
+                        <li className="item-protocolos  borda-esquerda-protocolos">Protocolos</li>
+                        <li className="item-servicos">Serviços</li>
                     </ul>
                 </div>
                 <div className="content-tomografia border-tomografia">
@@ -39,10 +40,11 @@ const App = () => {
                 </div>
 
 
-                <div className="grid-item content-protocolos">
+                <div className="grid-item-protocolo content-protocolos">
                     <h2 className="titulo-protocolos">Protocolos</h2>
+                    <Protocolo />
                 </div>
-                <div className="grid-item content-serviços">
+                <div className="grid-item-servicos content-serviços">
                     <h2 className="titulo-serviços">Serviços</h2>
                 </div>
             </div>

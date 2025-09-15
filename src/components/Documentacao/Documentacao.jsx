@@ -1,4 +1,3 @@
-import React from 'react';
 import './Documentacao.css';
 
 const opcoes2D = [
@@ -24,7 +23,6 @@ const Documentacao = () => {
   return (
     <div className="documentacao-container">
 
-
       {/* Coluna 2D */}
       <div className="documentacao-bloco">
         <div className="titulo-bloco">2D</div>
@@ -32,23 +30,31 @@ const Documentacao = () => {
           {opcoes2D.map((item, index) => {
             const isOrtodonticaCompleta = item === 'Ortodontica Completa';
             const isOFM = item === 'OFM';
+            const isOutra = item === 'Outra';
 
             return (
-              
               <li
-                key={`2d-${index}`}
-                className={`item-opcao ${isOrtodonticaCompleta ? 'linha-destaque' : isOFM ? 'linha-ofm-destaque' : ''
-                  }`}
+                key={`2d-${item}-${index}`}
+                className={`item-opcao ${
+                  isOrtodonticaCompleta ? 'linha-destaque' :
+                  isOFM ? 'linha-ofm-destaque' :
+                  isOutra ? 'item-outra-indentado' : ''
+                }`}
               >
-                <label htmlFor={`2d-${index}`} className="parentheses">
-                  <input type="checkbox" id={`2d-${index}`} />
-                  <span className="symbol"></span> {item}
-                </label>
+                {isOutra ? (
+                  <label htmlFor={`2d-${item}-${index}`} className="parentheses">
+                    <input type="checkbox" id={`2d-${item}-${index}`} name={`2d-${item}`} aria-label={item} />
+                    <span className="symbol"></span> {item}
+                    <input type="text" className="linha-outra" placeholder="________________" />
+                  </label>
+                ) : (
+                  <label htmlFor={`2d-${item}-${index}`} className="parentheses">
+                    <input type="checkbox" id={`2d-${item}-${index}`} name={`2d-${item}`} aria-label={item} />
+                    <span className="symbol"></span> {item}
+                  </label>
+                )}
 
-                {/* Linha para Ortodontica Completa */}
                 {isOrtodonticaCompleta && <div className="linha-horizontal-destaque"></div>}
-
-                {/* Linha para OFM */}
                 {isOFM && <div className="linha-horizontal-ofm"></div>}
               </li>
             );
@@ -78,12 +84,14 @@ const Documentacao = () => {
 
                 return (
                   <li
-                    key={`3d-${index}`}
-                    className={`item-opcao ${isOrtodontica ? 'linha-ortodontica-3d' : isOFM ? 'linha-ofm-3d' : ''
-                      }`}
+                    key={`3d-${item}-${index}`}
+                    className={`item-opcao ${
+                      isOrtodontica ? 'linha-ortodontica-3d' :
+                      isOFM ? 'linha-ofm-3d' : ''
+                    }`}
                   >
-                    <label htmlFor={`3d-${index}`} className="parentheses">
-                      <input type="checkbox" id={`3d-${index}`} />
+                    <label htmlFor={`3d-${item}-${index}`} className="parentheses">
+                      <input type="checkbox" id={`3d-${item}-${index}`} name={`3d-${item}`} aria-label={item} />
                       <span className="symbol"></span> {item}
                     </label>
 
@@ -97,7 +105,7 @@ const Documentacao = () => {
         </div>
       </div>
 
-
+      {/* Segunda Coluna Cefalometria */}
       <div className="documentacao-bloco-cefalo-fundo">
         <div className="cefalo-conteudo">
           <div className="linha-com-cefalo">
@@ -107,7 +115,6 @@ const Documentacao = () => {
         </div>
       </div>
     </div>
-
   );
 };
 

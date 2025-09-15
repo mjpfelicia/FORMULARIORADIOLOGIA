@@ -1,0 +1,25 @@
+.grid-item-protocolo {
+    box-sizing: border-box;
+    position: relative;
+    left: 22rem;
+    bottom: 29rem;
+    width: 369px;
+    height: 277px;
+    background-color: var(--rosa-bg);
+    padding: 0 1rem;
+
+}
+
+.linha-outra {
+    border: none;
+    width: 150px;
+    background-color: transparent;
+}
+
+.titulo-bloco-protocolo {
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: var(--rosa);
+    font-weight: bold;
+
+}

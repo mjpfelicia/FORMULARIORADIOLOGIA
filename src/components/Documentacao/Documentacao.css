@@ -15,6 +15,7 @@
   position: relative;
   margin: 0;
   text-align: center;
+  height: 0;
 
 }
 
@@ -185,4 +186,12 @@ display: flex
   width: 2rem;
   background-color: var(--azul-texto);
   margin-left: 12px;
+}
+
+
+
+.linha-outra {
+  border: none;
+  width: 150px;
+  background-color: transparent;
 }

@@ -57,11 +57,11 @@
 
 /* Item com borda deslocada */
 .item-documentacao {
-position: relative;
-    background-color: white;
-    color: var(--azul-texto);
-    margin-bottom: 10px;
-    font-weight: bold;
+  position: relative;
+  background-color: white;
+  color: var(--azul-texto);
+  margin-bottom: 10px;
+  font-weight: bold;
 
 }
 
@@ -91,6 +91,44 @@ position: relative;
 
 }
 
+
+.item-protocolos {
+  position: relative;
+  padding-right: 12px;
+}
+
+/* Borda colada à direita */
+.item-protocolos::after {
+  content: "";
+  position: absolute;
+  /* left: 7rem; */
+    top: 7px;
+    right: 0;
+    width: 44%;
+    height: 100%;
+    background-color: var(--rosa);
+    transform: translateX(25px);
+}
+
+
+
+
+
+/* Borda esquerda deslocada */
+.borda-esquerda-protocolos::before {
+ content: "";
+    position: absolute;
+    top: 7px;
+    right: 0;
+    width: 30px;
+    height: 53.6rem;
+    background-color: var(--rosa);
+    z-index: 9999;
+    transform: translateX(30px);
+}
+
+
+
 @media (max-width: 1200px) {
   .titulo-tomografia h2 {
     left: -90px;
@@ -110,7 +148,7 @@ position: relative;
     height: 97%;
     top: 6.9rem;
     transform: translateX(-4733%);
-   
+
   }
 
   .borda-documentaçao {
