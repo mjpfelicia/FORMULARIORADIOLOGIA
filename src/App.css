@@ -70,7 +70,7 @@ img {
 /* Grid principal */
 .grid-container {
     display: grid;
-    grid-template-columns: 150px 1fr;
+    grid-template-columns: 230px 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     justify-content: end;
     justify-items: end;
@@ -82,12 +82,11 @@ img {
 .sidebar {
     grid-row: 1 / 4;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    padding-right: 1rem;
+    width: 100%;
+    padding-left: 0.9rem;
     font-weight: bold;
     font-size: 18px;
+
 
 }
 
@@ -117,13 +116,14 @@ img {
 .item-documentacao::after {
     content: "";
     position: absolute;
-    top: 10px;
+    top: 7px;
     right: 0;
-    width: 49%;
+    width: 42%;
     height: 100%;
     background-color: var(--amarelo);
-    transform: translateX(114%);
+    transform: translateX(81px);
     z-index: 9999;
+
 }
 
 .sidebar ul li:nth-child(4) {
@@ -197,8 +197,6 @@ img {
     background-color: var(--verde-bg);
     z-index: 9999;
 }
-
-
 
 
 .tomografia-grid,
@@ -496,10 +494,10 @@ img {
 
 .titulo-protocolos {
     position: relative;
-    width: 368px;
+    width: 286px;
     right: 15px;
     font-size: 1.5rem;
-    height: 37px;
+    height: 35px;
     color: white;
     font-weight: bold;
     text-align: center;
@@ -508,9 +506,17 @@ img {
 }
 
 .content-serviços {
+   display: flex
+;
+width: 15%;
+    align-items: center;
+    /* justify-content: flex-start; */
+    flex-direction: column;
     position: relative;
-    position: relative;
-    right: 82rem;
-    bottom: 29rem;
-
+    right: 77rem;
+    bottom: 28rem;
+    background-color: var(--roxo-bg);
 }
+
+
+

@@ -1,12 +1,13 @@
 .grid-item-protocolo {
-    box-sizing: border-box;
+      box-sizing: border-box;
     position: relative;
-    left: 22rem;
-    bottom: 29rem;
-    width: 369px;
+    left: 17rem;
+  bottom: 28rem;
+    width: 285px;
     height: 277px;
     background-color: var(--rosa-bg);
     padding: 0 1rem;
+
 
 }
 

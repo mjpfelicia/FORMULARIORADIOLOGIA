@@ -2,6 +2,7 @@ import TomografiaForm from './components/TomografiaForm/TomografiaForm';
 import RadiografiaForm from './components/RadiografiaForm/RadiografiaForm';
 import Documentacao from './components/Documentacao/Documentacao';
 import Protocolo from './components/Protocolo/Protocolo';
+import Servicos from './components/Servicos/Servicos';
 import './components/borda.css';
 import seta from './images/seta.png';
 import arcada1 from './images/arcada1.png';
@@ -14,11 +15,11 @@ const App = () => {
             <div className="grid-container">
                 <div className="sidebar grid-item">
                     <ul>
-                        <li className="item-tomografia">Tomografia</li>
-                        <li className="item-radiografia">Radiografias</li>
-                        <li className="item-documentacao">Documentação</li>
-                        <li className="item-protocolos  borda-esquerda-protocolos">Protocolos</li>
-                        <li className="item-servicos">Serviços</li>
+                        <li className="item-tomografia">TOMOGRAFIA</li>
+                        <li className="item-radiografia">RADIOGRAFIAS</li>
+                        <li className="item-documentacao">DOCUMENTAÇÕES</li>
+                        <li className="item-protocolos  borda-esquerda-protocolos">PROTOCOLOS</li>
+                        <li className="item-servicos">SERVIÇOS</li>
                     </ul>
                 </div>
                 <div className="content-tomografia border-tomografia">
@@ -46,6 +47,8 @@ const App = () => {
                 </div>
                 <div className="grid-item-servicos content-serviços">
                     <h2 className="titulo-serviços">Serviços</h2>
+                     <Servicos />
+
                 </div>
             </div>
 

@@ -44,15 +44,15 @@
 
 /* Borda deslocada à direita */
 .item-radiografia::after {
-  content: "";
-  position: absolute;
-  top: 10px;
-  right: 0;
-  width: 86%;
-  height: 100%;
-  background-color: var(--azul-principal);
-  transform: translateX(100%);
-  z-index: 9999;
+content: "";
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 68%;
+    height: 100%;
+    background-color: var(--azul-principal);
+    transform: translateX(124%);
+    z-index: 9999;
 }
 
 /* Item com borda deslocada */
@@ -67,15 +67,16 @@
 
 /* Borda esquerda deslocada */
 .borda-esquerda-documentacao::before {
-  content: "";
-  position: absolute;
-  top: 7rem;
-  right: 0;
-  width: 2%;
-  height: 100%;
-  background-color: var(--amarelo);
-  transform: translateX(-4284%);
-  z-index: 9999;
+ content: "";
+    position: absolute;
+    top: 97px;
+    right: 0;
+    width: 2%;
+    height: 93%;
+    background-color: var(--amarelo);
+       transform: translateX(-4014%);
+    z-index: 9999;
+
 }
 
 /* Ajuste de largura para documentação */
@@ -87,8 +88,7 @@
   margin-left: -37px;
   margin-top: 0.5rem;
   width: calc(100% + 35px);
-
-
+  z-index: 9999;
 }
 
 
@@ -99,19 +99,15 @@
 
 /* Borda colada à direita */
 .item-protocolos::after {
-  content: "";
-  position: absolute;
-  /* left: 7rem; */
+content: "";
+    position: absolute;
     top: 7px;
     right: 0;
-    width: 44%;
+    width: 40%;
     height: 100%;
     background-color: var(--rosa);
-    transform: translateX(25px);
+    transform: translateX(43px);
 }
-
-
-
 
 
 /* Borda esquerda deslocada */
@@ -121,13 +117,11 @@
     top: 7px;
     right: 0;
     width: 30px;
-    height: 53.6rem;
+    height: 50.6rem;
     background-color: var(--rosa);
     z-index: 9999;
-    transform: translateX(30px);
+    transform: translateX(68px);
 }
-
-
 
 @media (max-width: 1200px) {
   .titulo-tomografia h2 {
