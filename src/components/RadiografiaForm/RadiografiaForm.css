@@ -12,3 +12,16 @@
     width: 100%;
     height: auto;
 }
+
+
+.radiografia-bloco-cefalometria{
+    display: flex;
+    padding-right: 9rem;
+    align-items: center;
+    width: 12%;
+    height: 50px;
+    border-left: 1px solid var(--azul-texto);
+    position: relative;
+    top:27px;
+}
+

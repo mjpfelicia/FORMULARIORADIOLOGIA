@@ -44,15 +44,15 @@
 
 /* Borda deslocada à direita */
 .item-radiografia::after {
-content: "";
-    position: absolute;
-    top: 10px;
-    right: 0;
-    width: 68%;
-    height: 100%;
-    background-color: var(--azul-principal);
-    transform: translateX(124%);
-    z-index: 9999;
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 68%;
+  height: 100%;
+  background-color: var(--azul-principal);
+  transform: translateX(124%);
+  z-index: 9999;
 }
 
 /* Item com borda deslocada */
@@ -67,15 +67,15 @@ content: "";
 
 /* Borda esquerda deslocada */
 .borda-esquerda-documentacao::before {
- content: "";
-    position: absolute;
-    top: 97px;
-    right: 0;
-    width: 2%;
-    height: 93%;
-    background-color: var(--amarelo);
-       transform: translateX(-4014%);
-    z-index: 9999;
+  content: "";
+  position: absolute;
+  top: 97px;
+  right: 0;
+  width: 2%;
+  height: 93%;
+  background-color: var(--amarelo);
+  transform: translateX(-4014%);
+  z-index: 9999;
 
 }
 
@@ -99,29 +99,59 @@ content: "";
 
 /* Borda colada à direita */
 .item-protocolos::after {
-content: "";
-    position: absolute;
-    top: 7px;
-    right: 0;
-    width: 40%;
-    height: 100%;
-    background-color: var(--rosa);
-    transform: translateX(43px);
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background-color: var(--rosa);
+  transform: translateX(43px);
 }
 
 
 /* Borda esquerda deslocada */
 .borda-esquerda-protocolos::before {
- content: "";
-    position: absolute;
-    top: 7px;
-    right: 0;
-    width: 30px;
-    height: 50.6rem;
-    background-color: var(--rosa);
-    z-index: 9999;
-    transform: translateX(68px);
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: 0;
+  width: 30px;
+  height: 50.6rem;
+  background-color: var(--rosa);
+  z-index: 9999;
+  transform: translateX(68px);
 }
+
+/* bordas serviços */
+.item-servicos {
+  position: relative;
+  padding-right: 12px;
+}
+
+.item-servicos::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: var(--roxo);
+  transform: translateX(30px);
+}
+
+.item-servicos::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: 0;
+  width: 30px;
+  height: 49.5rem;
+  background-color: var(--roxo);
+  z-index: 9999;
+  transform: translateX(30px);
+}
+
 
 @media (max-width: 1200px) {
   .titulo-tomografia h2 {
@@ -139,9 +169,14 @@ content: "";
   }
 
   .borda-esquerda-documentacao::before {
-    height: 97%;
-    top: 6.9rem;
-    transform: translateX(-4733%);
+   height: 97%;
+        top: 5.9rem;
+        transform: translateX(-4373%);
+    }
+  .borda-esquerda-protocolos::before {
+    height: 51.6rem;
+    
+
 
   }
 
@@ -150,6 +185,7 @@ content: "";
     width: calc(100% + 30px);
   }
 }
+
 
 @media (max-width: 768px) {
   .border-tomografia {

@@ -1,20 +1,57 @@
 .servicos-container {
-  
+  /* Mantido vazio para personalização futura */
 }
 
+/* Título centralizado */
 .servicos-container h2 {
   text-align: center;
   color: #2c3e50;
   margin-bottom: 25px;
 }
 
+/* Item de serviço com layout horizontal */
 .servico-item {
   display: flex;
   align-items: center;
   margin: 15px 0;
   padding: 10px;
- 
 }
 
+/* Título do serviço */
+.titulo-servico {
+  font-weight: bold;
+  color: var(--azul-texto);
+  font-size: 18px;
+  margin-left: 15px;
+}
 
+/* Lista de protocolos */
+.protocolo-lista {
+  list-style-type: none;
+  margin-top: 1rem;
+  padding: 0;
+}
 
+/* Item da lista */
+.protocolo-item {
+  margin-bottom: 1rem;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+  .servico-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .titulo-servico {
+    margin-left: 0;
+    margin-top: 8px;
+    font-size: 18px; /* Mantido conforme solicitado */
+  }
+
+  .protocolo-item {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}

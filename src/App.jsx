@@ -25,7 +25,7 @@ const App = () => {
                 <div className="content-tomografia border-tomografia">
                     <div className="borda-esquerda"></div>
                     <div className="titulo-tomografia">
-                        <h2>Tomografia</h2>
+                        <h2>TOMOGRAFIA</h2>
                     </div>
                     <div className="tomografia-content">
                         <TomografiaForm seta={seta} arcada1={arcada1} />
@@ -36,17 +36,17 @@ const App = () => {
                     <div className=" borda-documentaçao"></div>
                 </div>
                 <div className="content-documentacao borda-esquerda-documentacao">
-                    <h2 className='titulo-documentacao'>Documentaçao</h2>
+                    <h2 className='titulo-documentacao'>DOCUMENTAÇÕES</h2>
                     <Documentacao />
                 </div>
 
 
                 <div className="grid-item-protocolo content-protocolos">
-                    <h2 className="titulo-protocolos">Protocolos</h2>
+                    <h2 className="titulo-protocolos">PROTOCOLOS</h2>
                     <Protocolo />
                 </div>
                 <div className="grid-item-servicos content-serviços">
-                    <h2 className="titulo-serviços">Serviços</h2>
+                    <h2 className="titulo-serviços">SERVIÇOS</h2>
                      <Servicos />
 
                 </div>

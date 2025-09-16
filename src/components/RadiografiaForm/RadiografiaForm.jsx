@@ -48,11 +48,14 @@ const RadiografiaForm = () => {
             ))}
           </div>
 
-          <div className="coluna-direita">
-            <label className="parentheses" htmlFor="Cefalometria">
-              <input type="checkbox" id="Cefalometria" />
-              <span className="symbol"></span> Cefalometria
-            </label>
+          {/* Coluna Cefalometria */}
+          <div className="radiografia-bloco-cefalometria">
+            <div className="cefalo-conteudo">
+              <div className="linha-com-cefalo">
+                <div className="linha-esquerda"></div>
+                <div className="titulo-bloco-cefalo">Cefalometria</div>
+              </div>
+            </div>
           </div>
         </div>
 

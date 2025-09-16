@@ -134,8 +134,8 @@ img {
 }
 
 .sidebar ul li:nth-child(5) {
-    background-color: var(--roxo);
-    color: white;
+  
+    color:var(--azul-texto);
     font-weight: bold;
     padding: 10px;
     margin-bottom: 10px;
@@ -158,18 +158,19 @@ img {
     overflow: visible;
     width: 100%;
     color: white;
-    height: 30px;
+    height: 35px;
     text-align: center;
     z-index: 2;
 }
 
 .titulo-tomografia h2 {
     position: absolute;
-    height: 30px;
+    height: 35px;
     z-index: 2;
     left: -127px;
     width: calc(100% + 125px);
-    font-size: 28px;
+  font-size: 1.5rem;
+    font-weight: bold;
     margin: 0;
     color: white;
     background: var(--verde-titulo);
@@ -178,7 +179,7 @@ img {
 .titulo-documentacao {
     font-size: 1.5rem;
     height: 0;
-    top: -37px;
+    top: -33px;
     color: white;
     font-weight: bold;
     position: relative;
@@ -506,9 +507,8 @@ img {
 }
 
 .content-serviços {
-   display: flex
-;
-width: 15%;
+    display: flex;
+    width: 15%;
     align-items: center;
     /* justify-content: flex-start; */
     flex-direction: column;
@@ -518,5 +518,14 @@ width: 15%;
     background-color: var(--roxo-bg);
 }
 
+.titulo-serviços {
+    width: 100%;
+    background-color: var(--roxo);
+    color: white;
+    text-align: center;
+    font-weight: bold;
 
+    font-size: 1.5rem;
+    height: 35px;
 
+}
