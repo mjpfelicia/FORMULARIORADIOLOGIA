@@ -8,10 +8,6 @@
 
 
 .coluna {
-    /* display: flex
-; */
     background-color: var(--amarelo);
-    /* width: 24px; */
     height: 100%;
-
 }

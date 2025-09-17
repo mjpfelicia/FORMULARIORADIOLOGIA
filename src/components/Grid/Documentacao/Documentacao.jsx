@@ -21,15 +21,15 @@ const Coluna = () => {
         <div className="coluna">
             <div className="parte1"></div>
             <div className="parte2"></div>
-
         </div>
     )
 }
 
 const Header = () => {
     return (
-        <>   <h1>Documentação</h1></>
-
+        <>
+            <h1>Documentação</h1>
+        </>
     )
 }
 

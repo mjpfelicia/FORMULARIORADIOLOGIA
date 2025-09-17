@@ -1,14 +1,12 @@
 #protocolos {
     height: 100%;
 
-
     .header {
         
     }
-
     main {
         height: 100%;
-
-        background-color: #FEF2F7;
+        background-color: var(--rosa-bg);
     }
 }
+

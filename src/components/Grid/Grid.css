@@ -10,6 +10,13 @@
     --amarelo: #FFCB04;
     --rosa: #F6ADCD;
     --roxo: #6B4E7B;
+
+    --verde-bg: #F1F7DF;
+    --azul-bg: #D5E4F5;
+    --amarelo-bg: #FFF1DA;
+    --rosa-bg: #FEF3F8;
+    --roxo-bg: #E5CAD9;
+
     --font-color: #08385E;
 
     --col-space-gap: 0.5rem;
@@ -25,7 +32,7 @@
 .parent {
     display: grid;
     /* Correto */
-    grid-template-columns: var(--col-space-1) var(--col-space-1) var(--col-space-1) var(--col-space-1) var(--col-space-1) var(--col-space-1) var(--col-space-gap) var(--col-space-1) var(--col-space-gap) var(--col-space-1) var(--col-space-gap) var(--col-space-1) var(--col-space-gap) var(--col-space-2) var(--col-space-2) var(--col-space-2) var(--col-space-gap) var(--col-space-2) var(--col-space-2) var(--col-space-2) var(--col-space-2) var(--col-space-2) var(--col-space-2) var(--col-space-2);
+    grid-template-columns: var(--col-space-1) var(--col-space-1) var(--col-space-2) var(--col-space-1) var(--col-space-1) var(--col-space-1) var(--col-space-gap) var(--col-space-1) var(--col-space-gap) var(--col-space-1) var(--col-space-gap) var(--col-space-1) var(--col-space-gap) var(--col-space-2) var(--col-space-2) var(--col-space-2) var(--col-space-gap) var(--col-space-2) var(--col-space-2) var(--col-space-2) var(--col-space-2) var(--col-space-2) var(--col-space-2) var(--col-space-2);
     grid-template-rows: var(--row-space-1) var(--row-space-gap) var(--row-space-1) var(--row-space-gap) var(--row-space-1) var(--row-space-gap) var(--row-space-1) var(--row-space-gap) var(--row-space-1) 14rem var(--row-space-gap) var(--row-space-1) var(--row-space-2) var(--row-space-2) var(--row-space-2) var(--row-space-gap) var(--row-space-2) var(--row-space-gap) var(--row-space-1) var(--row-space-gap) var(--row-space-1) var(--row-space-2) var(--row-space-2) var(--row-space-2);
 
     /* height: 100vh; */
@@ -54,13 +61,13 @@
     /* display: flex; */
     grid-column: span 11 / span 11;
     grid-row-start: 3;
-
 }
 
 .azul2 {
     grid-row: span 9 / span 9;
     grid-column-start: 12;
     grid-row-start: 3;
+    background-color: var(--verde-bg);
 }
 
 .azul3 {
@@ -174,8 +181,39 @@
     background-color: var(--rosa);
 }
 
+.rosa3 {
+    background-color: var(--rosa-bg);
+}
+
+.verde2{
+    background-color: var(--verde-bg);
+    > div {
+        height: 100%;
+    }
+}
+
 .roxo {
     background-color: var(--roxo);
+}
+
+.roxo3 {
+    background-color: var(--roxo-bg);
+}
+
+.amarelo4 > div{
+    height: 100%;
+}
+
+.azul4 > div{
+    height: 100%;
+}
+
+.rosa3 > div{
+    height: 100%;
+}
+
+.roxo3 > div{
+    height: 100%;
 }
 
 .titulo {
@@ -191,7 +229,6 @@
         text-transform: uppercase;
     }
 }
-
 
 .verde1-barra {
     background: var(--verde);

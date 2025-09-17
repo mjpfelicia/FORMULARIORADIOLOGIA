@@ -8,6 +8,8 @@ import seta from './images/seta.png';
 import arcada1 from './images/arcada1.png';
 import './App.css';
 
+import Grid from './components/Grid/Grid';
+
 
 const App = () => {
     return (
@@ -52,7 +54,7 @@ const App = () => {
                 </div>
             </div>
 
-            {/* <Grid
+             <Grid
                 tomografia={{
                     Main: () => <TomografiaForm seta={seta} arcada1={arcada1} />,
                     Titulo: () => <h1>Tomografia</h1>,
@@ -62,14 +64,23 @@ const App = () => {
                     Titulo: () => <h1>Radiografia</h1>,
                 }}
                 documentacao={{
-                    Main: () => <GridComponets.Documentacao.Main />,
+                    Main: () => <Documentacao />,
                     Titulo: () => <h1>Documentação</h1>,
                     Header: () => <>Documentação</>,
-
+                }}
+                protocolos={{
+                    Main: () => <Protocolo />,
+                    Titulo: () => <h1>Protocolos</h1>,
+                    Header: () => <>Protocolos</>,
+                }}
+                servicos={{
+                    Main: () => <Servicos />,
+                    Titulo: () => <h1>Serviços</h1>,
+                    Header: () => <>Serviços</>,
                 }}
 
 
-            /> */}
+            /> 
         </div >
     );
 };

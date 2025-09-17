@@ -1,6 +1,6 @@
 import "./Grid.css";
 
-const Grid = ({ tomografia, radiografia, documentacao = {}, protocolos = {}, servicos = {} }) => {
+const Grid = ({ tomografia={}, radiografia={}, documentacao = {}, protocolos = {}, servicos = {} }) => {
     return (
         <div className="parent">
             <div className="verde verde1 titulo">{tomografia?.Titulo ? <tomografia.Titulo /> : <></>}</div>
