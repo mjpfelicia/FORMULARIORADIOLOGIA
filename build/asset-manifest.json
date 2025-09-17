@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/FORMULARIORADIOLOGIA/static/css/main.33633a4b.css",
-    "main.js": "/FORMULARIORADIOLOGIA/static/js/main.ea6508d7.js",
+    "main.css": "/FORMULARIORADIOLOGIA/static/css/main.ee28b851.css",
+    "main.js": "/FORMULARIORADIOLOGIA/static/js/main.50545dc2.js",
     "static/media/arcada-dentaria.png": "/FORMULARIORADIOLOGIA/static/media/arcada-dentaria.0bfca60a63eea500e5db.png",
     "static/media/arcada1.png": "/FORMULARIORADIOLOGIA/static/media/arcada1.72beb807e14a8ff40ff8.png",
     "index.html": "/FORMULARIORADIOLOGIA/index.html",
-    "main.33633a4b.css.map": "/FORMULARIORADIOLOGIA/static/css/main.33633a4b.css.map",
-    "main.ea6508d7.js.map": "/FORMULARIORADIOLOGIA/static/js/main.ea6508d7.js.map"
+    "main.ee28b851.css.map": "/FORMULARIORADIOLOGIA/static/css/main.ee28b851.css.map",
+    "main.50545dc2.js.map": "/FORMULARIORADIOLOGIA/static/js/main.50545dc2.js.map"
   },
   "entrypoints": [
-    "static/css/main.33633a4b.css",
-    "static/js/main.ea6508d7.js"
+    "static/css/main.ee28b851.css",
+    "static/js/main.50545dc2.js"
   ]
 }
